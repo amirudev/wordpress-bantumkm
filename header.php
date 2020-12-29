@@ -29,6 +29,12 @@
 				<a href="#">
 					<li>Hubungi Kami</li>
 				</a>
+				<button id="nav-close">
+					<li><< Close</li>
+				</button>
 			</ul>
+		</div>
+		<div class="nav-button" id="nav-open">
+			<button id="nav-button-open">☰</button>
 		</div>
 	</header>

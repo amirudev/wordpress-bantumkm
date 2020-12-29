@@ -32,7 +32,7 @@ header .brand {
 header .brand img {
 	width: 100px;
 	height: 50px;
-	margin-top: 20px; 
+	margin-top: 15px; 
 	float: left;
 }
 
@@ -55,6 +55,106 @@ header .nav ul li {
 	padding: 20px;
 }
 
+header .nav ul #nav-close {
+	display: none;
+}
+
+header .nav-button {
+	display: none;
+}
+
 header .nav ul li:hover {
 	background-color: rgb(200, 200, 200);
+}
+
+footer {
+	margin: 130px 0 0 0;
+	display: grid;
+	grid-template-columns: auto auto;
+	background: rgb(100, 100, 100);
+	color: white;
+}
+
+footer .brand #name{
+	padding: 20px;
+	font-weight: 600;
+	font-size: 25px;
+}
+
+footer .brand ul {
+	font-size: 15px;
+	list-style-type: none;
+}
+
+footer .brand ul a {
+	color: white;
+	text-decoration: none;
+}
+
+footer .brand ul a:hover {
+	text-decoration: underline;
+}
+
+footer .brand ul li {
+	padding: 10px;
+}
+
+footer .dev {
+	padding: 30px;
+}
+
+footer .dev ul {
+	list-style-type: none;
+}
+
+footer .dev ul li {
+	float: left;
+	padding: 5px;
+}
+
+@media screen and (max-width: 450px) {
+	header .brand {
+		padding: 0;
+	}
+
+	header .nav-button {
+		display: inline-block;
+		float: right;
+	}
+
+	header .nav-button button {
+		padding: 25px;
+		border: none;
+		background-color: white;
+		font-size: 18px;		
+	}
+
+	header .nav-button:hover {
+		background-color: rgb(200, 200, 200);
+	}
+
+	header .nav {
+		display: none;
+	}
+
+	header .nav ul {
+		padding: 0;
+	}
+
+	header .nav ul a {
+		color: black;
+	}
+
+	header .nav ul li {
+		width: 100%;
+		text-align: center;
+		padding: 20px 0;
+	}
+
+	header .nav ul button {
+		background-color: transparent;
+		border: none;
+		width: 100%;
+	}
+
 }
