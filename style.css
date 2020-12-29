@@ -1,0 +1,60 @@
+/*
+Theme Name: BantuUMKM;
+Theme URI: https://github.com/wahyuamirulloh/wordpress-bantumkm;
+Author: Wahyu Amirulloh;
+Author URI: https://github.com/wahyuamirulloh/;
+Description: BantuUMKM WordPress Theme for helping small business to go Online;
+Tags: blog, umkm, business, ecommerce, commerce, market;
+Version: 1.0;
+Requires at least: 5.6;
+License: MIT License;
+License URI: https://github.com/wahyuamirulloh/wordpress-bantumkm/blob/master/LICENSE;
+Text Domain: BantuUMKM;
+*/
+
+body {
+	font-family: Raleway, sans-serif;
+}
+
+/* Header */
+header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	box-shadow: 0px 0px 3px black;
+}
+
+header .brand {
+	padding-left: 60px;
+}
+
+header .brand img {
+	width: 100px;
+	height: 50px;
+	margin-top: 20px; 
+	float: left;
+}
+
+header .brand #name {
+	float: left;
+	padding-left: 20px;
+}
+
+header .nav {
+	clear: both;
+}
+
+header .nav ul {
+	list-style-type: none;
+	margin-top: 30px;
+}
+
+header .nav ul li {
+	float: left;
+	padding: 20px;
+}
+
+header .nav ul li:hover {
+	background-color: rgb(200, 200, 200);
+}
