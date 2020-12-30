@@ -14,6 +14,7 @@ Text Domain: BantuUMKM;
 
 body {
 	font-family: Raleway, sans-serif;
+	margin: 110px 0 0 0;
 }
 
 /* Header */
@@ -23,6 +24,8 @@ header {
 	left: 0px;
 	width: 100%;
 	box-shadow: 0px 0px 3px black;
+	background-color: white;
+	z-index: 10;
 }
 
 header .brand {
@@ -55,7 +58,11 @@ header .nav ul li {
 	padding: 20px;
 }
 
-header .nav ul #nav-close {
+header .nav ul li:hover {
+	background-color: rgb(200, 200, 200);
+}
+
+header .nav ul button {
 	display: none;
 }
 
@@ -63,17 +70,14 @@ header .nav-button {
 	display: none;
 }
 
-header .nav ul li:hover {
-	background-color: rgb(200, 200, 200);
-}
-
 footer {
-	margin: 130px 0 0 0;
 	display: grid;
 	grid-template-columns: auto auto;
 	background: rgb(100, 100, 100);
 	color: white;
 }
+
+/* Footer */
 
 footer .brand #name{
 	padding: 20px;
@@ -112,7 +116,9 @@ footer .dev ul li {
 	padding: 5px;
 }
 
-@media screen and (max-width: 450px) {
+/*  Responsive Header and Footer */
+
+@media screen and (max-width: 490px) {
 	header .brand {
 		padding: 0;
 	}
@@ -135,6 +141,8 @@ footer .dev ul li {
 
 	header .nav {
 		display: none;
+		background-color: white;
+		width: 100%;
 	}
 
 	header .nav ul {
@@ -152,9 +160,16 @@ footer .dev ul li {
 	}
 
 	header .nav ul button {
-		background-color: transparent;
+		background-color: white;
 		border: none;
 		width: 100%;
+		padding: 0;
 	}
+}
 
+/* Front-Page */
+
+.card {
+	margin: 10px;
+	width: 350px;
 }

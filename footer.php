@@ -9,7 +9,7 @@
 					<li>Produk</li>
 				</a>
 				<a href="#">
-					<li>Layanan</li>
+					<li>Blog</li>
 				</a>
 				<a href="#">
 					<li>Hubungi Kami</li>
