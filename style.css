@@ -14,7 +14,7 @@ Text Domain: BantuUMKM;
 
 body {
 	/*font-family: Raleway, sans-serif;*/
-	margin-top: 110px;
+	margin-top: 130px;
 	background-color: white;
 }
 
@@ -127,11 +127,11 @@ footer .dev ul li {
 	}
 
 	header .brand img {
-		margin-top: 15px;
+		margin-top: 10px;
 	}
 
 	header .brand #name {
-		padding-top: 20px;
+		padding-top: 12px;
 	}
 
 	header .nav-button {
@@ -140,7 +140,7 @@ footer .dev ul li {
 	}
 
 	header .nav-button button {
-		padding: 25px;
+		padding: 15px;
 		border: none;
 		background-color: white;
 		font-size: 18px;		
@@ -196,6 +196,10 @@ footer .dev ul li {
 .card-footer {
 	bottom: 0;
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 	width: 100%;
+}
+
+.main-content {
+	clear: both;
 }
