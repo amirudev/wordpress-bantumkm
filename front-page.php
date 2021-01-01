@@ -2,9 +2,10 @@
 <div class="main-content container-fluid">
     <div class="page-title">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12">
                 <h3>Produk</h3>
                 <p class="text-subtitle text-muted">Dapatkan produk terbaru dan terlaris kami disini</p>
+                <hr>
             </div>
         </div>
     </div>
@@ -44,7 +45,7 @@
 <div class="main-content container-fluid">
     <div class="page-title">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12">
                 <h3>Blog</h3>
                 <p class="text-subtitle text-muted">Dapatkan informasi terbaru disini</p>
                 <hr>
@@ -56,7 +57,7 @@
     if($product_post_query->have_posts()) {
         while($product_post_query->have_posts()) {
             $product_post_query->the_post(); ?>
-            <div class="card col-xl-4 col-md-6 col-sm-12 h-500">
+            <div class="card col-xl-4 col-md-6 col-sm-12">
                 <div class="card-content">
                     <div class="card-body">
                         <h4 class="card-title"><?php the_title(); ?></h4>
@@ -78,6 +79,7 @@
                 </div>
                 <div class="card-footer d-flex justify-content-between bg-light">
                     <!-- Tanggal blog -->
+                    <span><?php the_date(); ?></span>
                     <button class="btn btn-success">Baca Selengkapnya</button>
                 </div>
             </div>
