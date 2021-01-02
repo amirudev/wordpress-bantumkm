@@ -19,7 +19,6 @@ function wp_theme_support() {
 function wp_custom_post_type() {
 	$support = array(
 		'title',
-		'title',
 		'editor',
 		'thumbnail',
 		'custom-fields'
@@ -60,7 +59,7 @@ if( function_exists('acf_add_local_field_group') ){
 					array(
 						'param' => 'post_type',
 						'operator' => '==',
-						'value' => 'product' // Not working for custom post type 'product'
+						'value' => 'products' // Not working for custom post type 'product'
 					),
 				),
 			),
