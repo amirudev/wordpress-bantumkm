@@ -13,9 +13,10 @@ Text Domain: BantuUMKM;
 */
 
 body {
-	/*font-family: Raleway, sans-serif;*/
+	font-family: Raleway, sans-serif;
+	background-color: rgb(240, 240, 240);
 	margin-top: 130px;
-	background-color: white;
+	/*background-color: white;*/
 }
 
 /* Header */
@@ -179,27 +180,6 @@ footer .dev ul li {
 }
 
 /* Frontpage */
-
 .card {
-	float: left;
-	height: 400px;
-}
-
-.card-image img {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
-	bottom: 55px;
-	position: absolute;
-}
-
-.card-footer {
-	bottom: 0;
-	position: absolute;
-	z-index: 3;
-	width: 100%;
-}
-
-.main-content {
-	clear: both;
+	box-shadow: 1px 1px 4px grey;
 }

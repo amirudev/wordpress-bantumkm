@@ -4,6 +4,7 @@ $version = wp_get_theme()->get('version');
 function wp_register_styles() {
 	wp_enqueue_style('bantumkm_bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css', $version);
 	wp_enqueue_style('bantumkm_style', get_template_directory_uri() . '/style.css', $version);
+	wp_enqueue_style('raleway_fonts', get_template_directory_uri() . '/assets/fonts/Raleway-Regular.ttf', $version);
 }
 function wp_register_scripts() {
 	wp_enqueue_script('bantumkm_script', get_template_directory_uri() . '/assets/js/script.js', $version);
@@ -19,9 +20,9 @@ function wp_theme_support() {
 function wp_custom_post_type() {
 	$support = array(
 		'title',
+		'custom-fields',
 		'editor',
 		'thumbnail',
-		'custom-fields'
 	);
 	$labels = array(
 		'name' => _x('Produk', 'plural'),
@@ -49,7 +50,7 @@ if( function_exists('acf_add_local_field_group') ){
 			'fields' => array(
 				array(
 					'key' => 'price_field',
-					'label' => 'Price',
+					'label' => 'Harga',
 					'name' => 'Price',
 					'type' => 'number'
 				)
@@ -67,6 +68,15 @@ if( function_exists('acf_add_local_field_group') ){
 	);
 }
 
+// Navigation Menu
+function register_my_menus(){
+	register_nav_menus(
+		array(
+			'theme-location' => 'header-menu'
+		)
+	);
+}
+
 // Customize website functionality
 add_action('wp_enqueue_scripts', 'wp_register_styles');
 add_action('wp_enqueue_scripts', 'wp_register_scripts');
@@ -74,6 +84,9 @@ add_action('after_setup_theme', 'wp_theme_support');
 
 // Registering post type
 add_action('init', 'wp_custom_post_type');
+
+// Registering nav menu
+add_action('init', 'register_my_menus');
 
 // Excerpt Configuration
 add_filter('excerpt_length',function (){
