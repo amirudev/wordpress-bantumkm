@@ -16,8 +16,8 @@ function wp_theme_support() {
 	add_theme_support('post-thumbnails');
 }
 
-// Custom Post Type
-function wp_custom_post_type() {
+// Custom Post Type Product
+function wp_custom_post_type_product() {
 	$support = array(
 		'title',
 		'custom-fields',
@@ -32,13 +32,38 @@ function wp_custom_post_type() {
 	$args = array(
 		'supports' => $support,
 		'labels' => $labels,
+		'description' => 'Add your product to be displayed on Product page',
 		'public' => true,
 		'query_var' => true,
-		'rewrite' => array('slug' => 'Product'),
+		'rewrite' => array('slug' => 'product'),
 		'has_archive' => true,
-		'hierarchical' => true
+		'publicly_queryable' => true,
 	);
 	register_post_type('Products', $args);
+}
+
+// Custom Post Type Blog
+function wp_custom_post_type_blog() {
+	$support = array(
+		'title',
+		'editor',
+		'thumbnail',
+	);
+	$labels = array(
+		'name' => _x('Blog', 'plural'),
+		'singular_name' => _x('Blog', 'singular'),
+		'add_new' => _x('Tambah Blog', 'add new')
+	);
+	$args = array(
+		'supports' => $support,
+		'labels' => $labels,
+		'public' => true,
+		'query_var' => true,
+		'rewrite' => array('slug' => 'blog'),
+		'has_archive' => true,
+		'taxonomies' => array('post_tag'),
+	);
+	register_post_type('Blog', $args);
 }
 
 // ACF Add Local Fields
@@ -81,7 +106,8 @@ add_action('wp_enqueue_scripts', 'wp_register_scripts');
 add_action('after_setup_theme', 'wp_theme_support');
 
 // Registering post type
-add_action('init', 'wp_custom_post_type');
+add_action('init', 'wp_custom_post_type_product');
+add_action('init', 'wp_custom_post_type_blog');
 
 // Registering nav menu
 add_action('init', 'register_my_menus');
