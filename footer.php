@@ -1,20 +1,7 @@
 	<footer>
 		<div class="brand">
 			<h2 id="name"><?php echo get_bloginfo() ?></h2>
-			<ul>
-				<a href="#">
-					<li>Beranda</li>
-				</a>
-				<a href="#">
-					<li>Produk</li>
-				</a>
-				<a href="#">
-					<li>Blog</li>
-				</a>
-				<a href="#">
-					<li>Hubungi Kami</li>
-				</a>
-			</ul>
+			<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
 		</div>
 		<div class="dev">
 			<p>Designed by : Wahyu Amirulloh</p>
