@@ -1,6 +1,6 @@
 	<footer>
 		<div class="brand">
-			<h2 id="name">BantuUMKM</h2>
+			<h2 id="name"><?php echo get_bloginfo() ?></h2>
 			<ul>
 				<a href="#">
 					<li>Beranda</li>

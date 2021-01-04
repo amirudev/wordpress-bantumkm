@@ -12,22 +12,11 @@
 	<header>
 		<div class="brand">
 			<img src="<?php echo get_template_directory_uri() ?>/assets/logo/logo.png">
-			<h2 id="name">Bantu UMKM</h2>
+			<h2 id="name"><?php echo get_bloginfo() ?></h2>
 		</div>
 		<div class="nav" id="navbar">
+			<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
 			<ul>
-				<a href="#">
-					<li>Beranda</li>
-				</a>
-				<a href="#">
-					<li>Produk</li>					
-				</a>
-				<a href="#">
-					<li>Blog</li>
-				</a>
-				<a href="#">
-					<li>Hubungi Kami</li>
-				</a>
 				<button id="nav-button-close">
 					<li>X</li>
 				</button>

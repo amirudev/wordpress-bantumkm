@@ -60,7 +60,7 @@ if( function_exists('acf_add_local_field_group') ){
 					array(
 						'param' => 'post_type',
 						'operator' => '==',
-						'value' => 'products' // Not working for custom post type 'product'
+						'value' => 'products'
 					),
 				),
 			),
@@ -70,10 +70,8 @@ if( function_exists('acf_add_local_field_group') ){
 
 // Navigation Menu
 function register_my_menus(){
-	register_nav_menus(
-		array(
-			'theme-location' => 'header-menu'
-		)
+	register_nav_menu(
+		'header-menu', __('Header Menu')
 	);
 }
 
