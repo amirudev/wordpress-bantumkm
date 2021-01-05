@@ -113,9 +113,6 @@ add_action('init', 'wp_custom_post_type_blog');
 add_action('init', 'register_my_menus');
 
 // Excerpt Configuration
-add_filter('excerpt_length',function (){
-	return 15;
-});
 add_filter('excerpt_more', function(){
 	return ' ...';
 })
