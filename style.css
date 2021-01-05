@@ -189,10 +189,11 @@ footer .dev ul li {
 }
 
 /* Frontpage */
+
 .grid-container {
 	display: grid;
-	grid-template-columns: 587px auto;
-	height: 521px;
+	grid-template-columns: 751px auto;
+	height: 440px;
 	width: 1250px;
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -205,10 +206,28 @@ footer .dev ul li {
 .product-container .card {
 	padding-bottom: 40px;
 	height: 100%;
+	border-radius: 25px;
 }
 
 .product-container .card .btn {
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
+}
+
+.product-container #card-2 {
+	border-radius: 25px 25px 25px 0;
+}
+
+.product-container #card-3 {
+	border-radius: 0px 25px 25px 25px;
+}
+
+.card-container {
+	width: 1250px;
+	margin: 10px auto;
+}
+
+.card-container .card {
+	margin: 10px 0;
 }
