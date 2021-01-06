@@ -15,7 +15,7 @@ Text Domain: BantuUMKM;
 body {
 	font-family: Raleway, sans-serif;
 	background-color: rgb(240, 240, 240);
-	margin-top: 130px;
+	margin-top: 150px;
 	/*background-color: white;*/
 }
 
@@ -201,6 +201,42 @@ footer .dev ul li {
 
 .main-product {
 	grid-row: 1 / 3;
+	position: relative;
+}
+
+.main-product-image {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.main-product-image img {
+	width: 100%;
+	object-fit: cover;
+	height: 340px;
+	border-radius: 25px;
+}
+
+.side-product-image {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.side-product-image img {
+	width: 100%;
+	object-fit: cover;
+	height: 80px;
+	border-radius: 25px;
+}
+
+.side-product .card-text p {
+	max-height: 50px;
+	overflow-y: hidden;
+}
+
+.card-body {
+	z-index: 2;
 }
 
 .product-container .card {
@@ -230,4 +266,10 @@ footer .dev ul li {
 
 .card-container .card {
 	margin: 10px 0;
+}
+
+.card-image img {
+	width: 100%;
+	max-height: 200px;
+	object-fit: cover;
 }

@@ -1,32 +1,74 @@
 <?php get_header(); ?>
     <div class="grid-container product-container">
-		<div class="main-product">
-			<div class="card" id="card-1">
-				<div class="card-body">
-					<h5 class="card-title">Special title treatment</h5>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
-				</div>
-			</div>
-		</div>
-		<div class="side-product">
-			<div class="card" id="card-2">
-				<div class="card-body">
-					<h5 class="card-title">Special title treatment</h5>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
-				</div>
-			</div>
-		</div>
-		<div class="side-product">
-			<div class="card" id="card-3">
-				<div class="card-body">
-					<h5 class="card-title">Special title treatment</h5>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
-				</div>
-			</div>
-		</div>
+        <?php
+        $posts_product_A = new WP_Query(
+            array(
+                'post_type' => 'products',
+                'posts_per_page' => 1,
+                'offset' => 0
+            )
+        );
+        if($posts_product_A->have_posts()) {
+            $posts_product_A->the_post(); ?>
+            <div class="main-product">
+                <div class="card" id="card-1">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php the_title(); ?></h5>
+                        <p class="card-text"><?php the_Excerpt(); ?></p>
+                        <a href="#" class="btn btn-primary">Beli Sekarang</a>
+                    </div>
+                    <div class="main-product-image">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+        <?php
+        $posts_product_B = new WP_Query(
+            array(
+                'post_type' => 'products',
+                'posts_per_page' => 1,
+                'offset' => 1
+            )
+        );
+        if($posts_product_B->have_posts()) {
+            $posts_product_B->the_post();?>
+            <div class="side-product">
+                <div class="card" id="card-2">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php the_title(); ?></h5>
+                        <div class="card-text"><?php the_excerpt(); ?></div>
+                        <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
+                    </div>
+                    <div class="side-product-image">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+        <?php
+        $posts_product_C = new WP_Query(
+            array(
+                'post_type' => 'products',
+                'posts_per_page' => 1,
+                'offset' => 2
+            )
+        );
+        if($posts_product_C->have_posts()) {
+            $posts_product_C->the_post(); ?>
+            <div class="side-product">
+                <div class="card" id="card-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php the_title(); ?></h5>
+                        <div class="card-text"><?php the_excerpt(); ?></div>
+                        <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
+                    </div>
+                    <div class="side-product-image">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
 	</div>
 	<section class="card-container">
 		<div class="page-title">
@@ -52,13 +94,15 @@
                         $posts_product_1->the_post(); ?>
                         <div class="card">
                             <div class="card-content">
+                                <div class="card-image">
+                                    <?php the_post_thumbnail(); ?>
+                                </div>
                                 <div class="card-body">
-                                    <h4 class="card-title"><?php the_title(); ?></h4>
+                                    <h4 class="card-title" id="<?php the_ID(); ?>"><?php the_title(); ?></h4>
                                     <p class="card-text">
                                         <?php the_excerpt(); ?>
                                     </p>
                                 </div>
-                                <!-- Image placeholder -->
                             </div>
                             <div class="card-footer d-flex justify-content-between">
                                 <span><?php the_field('Price') ?></span>
@@ -79,16 +123,18 @@
             );
             if($posts_product_2->have_posts()) {
                 while($posts_product_2->have_posts()) {
-                    $posts_product_2->the_post(); ?>
+                    $posts_product_2->the_post();?>
                     <div class="card">
                         <div class="card-content">
+                            <div class="card-image">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
                             <div class="card-body">
                                 <h4 class="card-title"><?php the_title(); ?></h4>
                                 <p class="card-text">
                                     <?php the_excerpt(); ?>
                                 </p>
                             </div>
-                            <!-- Image placeholder -->
                         </div>
                         <div class="card-footer d-flex justify-content-between">
                             <span><?php the_field('Price') ?></span>
@@ -112,13 +158,15 @@
                         $posts_product_3->the_post(); ?>
                         <div class="card">
                             <div class="card-content">
+                                <div class="card-image">
+                                    <?php the_post_thumbnail(); ?>
+                                </div>
                                 <div class="card-body">
                                     <h4 class="card-title"><?php the_title(); ?></h4>
                                     <p class="card-text">
                                         <?php the_excerpt(); ?>
                                     </p>
                                 </div>
-                                <!-- Image placeholder -->
                             </div>
                             <div class="card-footer d-flex justify-content-between">
                                 <span><?php the_field('Price') ?></span>
@@ -153,12 +201,14 @@
                         $post_blog_1->the_post(); ?>
                         <div class="card">
                             <div class="card-content">
-                                <!-- Image Placeholder -->
                                 <div class="card-body">
                                     <h5 class="card-title"><?php the_title(); ?></h5>
                                     <p class="card-text">
                                         <?php the_excerpt(); ?>
                                     </p>
+                                </div>
+                                <div class="card-image">
+                                    <?php the_post_thumbnail(); ?>
                                 </div>
                             </div>
                             <ul class="list-group list-group-flush">
@@ -186,12 +236,14 @@
                         $post_blog_2->the_post(); ?>
                         <div class="card">
                             <div class="card-content">
-                                <!-- Image Placeholder -->
                                 <div class="card-body">
                                     <h5 class="card-title"><?php the_title(); ?></h5>
                                     <p class="card-text">
                                         <?php the_excerpt(); ?>
                                     </p>
+                                </div>
+                                <div class="card-image">
+                                    <?php the_post_thumbnail(); ?>
                                 </div>
                             </div>
                             <ul class="list-group list-group-flush">
@@ -220,12 +272,14 @@
                         $post_blog_3->the_post(); ?>
                         <div class="card">
                             <div class="card-content">
-                                <!-- Image Placeholder -->
                                 <div class="card-body">
                                     <h5 class="card-title"><?php the_title(); ?></h5>
                                     <p class="card-text">
                                         <?php the_excerpt(); ?>
                                     </p>
+                                </div>
+                                <div class="card-image">
+                                    <?php the_post_thumbnail(); ?>
                                 </div>
                             </div>
                             <ul class="list-group list-group-flush">
@@ -240,4 +294,5 @@
                 ?>
             </div>
         </div>
-	</section>
+    </section>
+    <?php get_footer(); ?>
