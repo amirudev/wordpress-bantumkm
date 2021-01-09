@@ -113,7 +113,7 @@
                                         echo 'Free';
                                     endif;
                                     ?></span>
-                                    <button class="btn btn-success">Beli Sekarang</button>
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-success">Beli Sekarang</a>
                                 </div>
                             </div>
                         <?php }

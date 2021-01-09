@@ -281,3 +281,13 @@ footer .dev ul li {
 .card-footer {
 	border-radius: 30px;
 }
+
+/* Single Page */
+
+.product-description {
+	margin: 0 auto;
+}
+
+.product-description .card {
+	padding: 20px;
+}
