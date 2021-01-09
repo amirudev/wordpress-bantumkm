@@ -229,7 +229,7 @@ footer .dev ul li {
 	width: 100%;
 	object-fit: cover;
 	height: 80px;
-	border-radius: 25px;
+	border-radius: 25px 0;
 }
 
 .side-product .card-text p {
@@ -290,4 +290,47 @@ footer .dev ul li {
 
 .product-description .card {
 	padding: 20px;
+}
+
+.product-description .card .product-image img {
+	width: 100%;
+	object-fit: cover;
+	height: 300px;
+}
+
+.product-description .product-headesc {
+	padding: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-description .product-headesc .title {
+	font-size: 25px;
+	font-weight: 400;
+}
+
+.product-description .product-headesc .price {
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.product-description .icon-store {
+	width: 25px;
+}
+
+.product-description .seller-name {
+	padding: 10px;
+}
+
+.product-headesc .contact .btn {
+	position: absolute;
+	width: 40%;
+	bottom: 20px;
+}
+
+.product-headesc .contact img {
+	float: left;
+}
+
+.product-headesc .contact span {
+	font-weight: 600;
 }
