@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><?php the_title(); ?></h5>
                         <p class="card-text"><?php the_Excerpt(); ?></p>
-                        <a href="#" class="btn btn-primary">Beli Sekarang</a>
+                        <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
                     </div>
                     <div class="main-product-image">
                         <?php the_post_thumbnail(); ?>
@@ -106,7 +106,13 @@
                                     </div>
                                 </div>
                                 <div class="card-footer d-flex justify-content-between">
-                                    <span><?php the_field('Price') ?></span>
+                                    <span><?php
+                                    if(get_field('Price')):
+                                        echo 'Rp' . number_format(get_field('Price'));
+                                    else:
+                                        echo 'Free';
+                                    endif;
+                                    ?></span>
                                     <button class="btn btn-success">Beli Sekarang</button>
                                 </div>
                             </div>
@@ -125,7 +131,6 @@
 		</div>
         <div class="row">
             <?php for ($display_offset=0; $display_offset <= 6; $display_offset += 3) { ?>
-                # code...
                 <div class="col-xl-4 col-md-6 col-sm-12">
                     <?php 
                     $post_blog_1 = new WP_Query(
