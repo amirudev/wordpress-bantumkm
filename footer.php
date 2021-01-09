@@ -2,6 +2,7 @@
 		<div class="brand">
 			<h2 id="name"><?php echo get_bloginfo() ?></h2>
 			<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
+			<small>Privacy Policy</small>
 		</div>
 		<div class="dev">
 			<p>Designed by : Wahyu Amirulloh</p>

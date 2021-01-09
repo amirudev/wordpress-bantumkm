@@ -80,102 +80,40 @@
 			</div>
 		</div>
         <div class="row">
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <?php 
-                $posts_product_1 = new WP_Query(
-                    array(
-                        'post_type' => 'products',
-                        'posts_per_page' => 3,
-                        'offset' => 0,
-                    )
-                );
-                if($posts_product_1->have_posts()) {
-                    while($posts_product_1->have_posts()) {
-                        $posts_product_1->the_post(); ?>
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-image">
-                                    <?php the_post_thumbnail(); ?>
+            <?php for ($display_offset=0; $display_offset <= 6; $display_offset += 3) { ?>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <?php 
+                    $posts_product = new WP_Query(
+                        array(
+                            'post_type' => 'products',
+                            'posts_per_page' => 3,
+                            'offset' => $display_offset,
+                        )
+                    );
+                    if($posts_product->have_posts()) {
+                        while($posts_product->have_posts()) {
+                            $posts_product->the_post(); ?>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-image">
+                                        <?php the_post_thumbnail(); ?>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title" id="<?php the_ID(); ?>"><?php the_title(); ?></h4>
+                                        <p class="card-text">
+                                            <?php the_excerpt(); ?>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <h4 class="card-title" id="<?php the_ID(); ?>"><?php the_title(); ?></h4>
-                                    <p class="card-text">
-                                        <?php the_excerpt(); ?>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between">
-                                <span><?php the_field('Price') ?></span>
-                                <button class="btn btn-success">Beli Sekarang</button>
-                            </div>
-                        </div>
-                    <?php }
-                } ?>
-			</div>
-			<div class="col-xl-4 col-md-6 col-sm-12">
-            <?php 
-            $posts_product_2 = new WP_Query(
-                array(
-                    'post_type' => 'products',
-                    'posts_per_page' => 3,
-                    'offset' => 3,
-                )
-            );
-            if($posts_product_2->have_posts()) {
-                while($posts_product_2->have_posts()) {
-                    $posts_product_2->the_post();?>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-image">
-                                <?php the_post_thumbnail(); ?>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title"><?php the_title(); ?></h4>
-                                <p class="card-text">
-                                    <?php the_excerpt(); ?>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card-footer d-flex justify-content-between">
-                            <span><?php the_field('Price') ?></span>
-                            <button class="btn btn-success">Beli Sekarang</button>
-                        </div>
-                    </div>
-                <?php }
-            } ?>
-			</div>
-			<div class="col-xl-4 col-md-6 col-sm-12">
-                <?php 
-                $posts_product_3 = new WP_Query(
-                    array(
-                        'post_type' => 'products',
-                        'posts_per_page' => 3,
-                        'offset' => 6,
-                    )
-                );
-                if($posts_product_3->have_posts()) {
-                    while($posts_product_3->have_posts()) {
-                        $posts_product_3->the_post(); ?>
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-image">
-                                    <?php the_post_thumbnail(); ?>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title"><?php the_title(); ?></h4>
-                                    <p class="card-text">
-                                        <?php the_excerpt(); ?>
-                                    </p>
+                                <div class="card-footer d-flex justify-content-between">
+                                    <span><?php the_field('Price') ?></span>
+                                    <button class="btn btn-success">Beli Sekarang</button>
                                 </div>
                             </div>
-                            <div class="card-footer d-flex justify-content-between">
-                                <span><?php the_field('Price') ?></span>
-                                <button class="btn btn-success">Beli Sekarang</button>
-                            </div>
-                        </div>
-                    <?php }
-                } ?>
-			</div>
+                        <?php }
+                    } ?>
+                </div>
+            <?php } ?>
 		</div>
 		<div class="page-title">
 			<div class="row">
@@ -186,113 +124,44 @@
 			</div>
 		</div>
         <div class="row">
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <?php 
-                $post_blog_1 = new WP_Query(
-                    array(
-                        'post_type' => 'blog',
-                        'post_per_page' => '3',
-                        'offset' => 0,
-                    )
-                );
+            <?php for ($display_offset=0; $display_offset <= 6; $display_offset += 3) { ?>
+                # code...
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <?php 
+                    $post_blog_1 = new WP_Query(
+                        array(
+                            'post_type' => 'blog',
+                            'post_per_page' => '3',
+                            'offset' => $display_offset,
+                        )
+                    );
 
-                if($post_blog_1->have_posts()){
-                    while($post_blog_1->have_posts()){
-                        $post_blog_1->the_post(); ?>
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php the_title(); ?></h5>
-                                    <p class="card-text">
-                                        <?php the_excerpt(); ?>
-                                    </p>
+                    if($post_blog_1->have_posts()){
+                        while($post_blog_1->have_posts()){
+                            $post_blog_1->the_post(); ?>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php the_title(); ?></h5>
+                                        <p class="card-text">
+                                            <?php the_excerpt(); ?>
+                                        </p>
+                                    </div>
+                                    <div class="card-image">
+                                        <?php the_post_thumbnail(); ?>
+                                    </div>
                                 </div>
-                                <div class="card-image">
-                                    <?php the_post_thumbnail(); ?>
-                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Dibuat pada <?php the_date(); ?></li>
+                                    <li class="list-group-item">Author : <?php the_author(); ?></li>
+                                </ul>
+                                <button class="btn btn-primary">Baca Selengkapnya</button>
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Dibuat pada <?php the_date(); ?></li>
-                                <li class="list-group-item">Author : <?php the_author(); ?></li>
-                            </ul>
-                            <button class="btn btn-primary">Baca Selengkapnya</button>
-                        </div>
-                    <?php }
-                }
-                ?>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <?php 
-                $post_blog_2 = new WP_Query(
-                    array(
-                        'post_type' => 'blog',
-                        'post_per_page' => '3',
-                        'offset' => 3,
-                    )
-                );
-
-                if($post_blog_2->have_posts()){
-                    while($post_blog_2->have_posts()){
-                        $post_blog_2->the_post(); ?>
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php the_title(); ?></h5>
-                                    <p class="card-text">
-                                        <?php the_excerpt(); ?>
-                                    </p>
-                                </div>
-                                <div class="card-image">
-                                    <?php the_post_thumbnail(); ?>
-                                </div>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <button class="btn btn-primary">Baca Selengkapnya</button>
-                        </div>
-                    <?php }
-                }
-                ?>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <?php 
-                $post_blog_3 = new WP_Query(
-                    array(
-                        'post_type' => 'blog',
-                        'post_per_page' => '3',
-                        'offset' => 6,
-                    )
-                );
-
-                if($post_blog_3->have_posts()){
-                    while($post_blog_3->have_posts()){
-                        $post_blog_3->the_post(); ?>
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php the_title(); ?></h5>
-                                    <p class="card-text">
-                                        <?php the_excerpt(); ?>
-                                    </p>
-                                </div>
-                                <div class="card-image">
-                                    <?php the_post_thumbnail(); ?>
-                                </div>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                            <button class="btn btn-primary">Baca Selengkapnya</button>
-                        </div>
-                    <?php }
-                }
-                ?>
-            </div>
+                        <?php }
+                    }
+                    ?>
+                </div>
+            <?php } ?>
         </div>
     </section>
     <?php get_footer(); ?>
