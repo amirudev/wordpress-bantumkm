@@ -100,6 +100,26 @@ function register_my_menus(){
 	);
 }
 
+// Customize Register
+function wp_customize_register($wp_customize) {
+	$wp_customize->add_section('wp_contactinfo_section', array(
+		'title' => 'Informasi Kontak',
+		'priority' => 30
+	));
+
+	$wp_customize->add_setting('wp_contactinfo-contact', array());
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'wp_contactinfo_control',
+		array(
+			'label' => __('Informasi Kontak', 'wp'),
+			'section' => 'wp_contactinfo_section',
+			'settings' => 'wp_contactinfo-contact',
+			'priority' => 1
+		)
+	));
+}
+
 // Customize website functionality
 add_action('wp_enqueue_scripts', 'wp_register_styles');
 add_action('wp_enqueue_scripts', 'wp_register_scripts');
@@ -112,9 +132,11 @@ add_action('init', 'wp_custom_post_type_blog');
 // Registering nav menu
 add_action('init', 'register_my_menus');
 
+// Register Customize Register
+add_action('customize_register', 'wp_customize_register');
+
 // Excerpt Configuration
 add_filter('excerpt_more', function(){
 	return ' ...';
 })
-
 ?>

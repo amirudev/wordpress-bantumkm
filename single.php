@@ -31,5 +31,13 @@
                 </div>
             </div>
         </div>
+        <hr>
+        <div class="row">
+            <div class="col-xl-8 col-md-10 col-sm-12">
+                    <h2>Deskripsi Produk</h2>
+                    <hr>
+                    <?php the_content(); ?>
+            </div>
+        </div>
     </div>
 </div>
