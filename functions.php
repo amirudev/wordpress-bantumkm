@@ -113,6 +113,7 @@ function wp_customize_register($wp_customize) {
 		'wp_contactinfo_control',
 		array(
 			'label' => __('Informasi Kontak', 'wp'),
+			'description' => 'Akan digunakan sebagai link menuju WhatsApp kamu disetiap produk, gunakan 62xx',
 			'section' => 'wp_contactinfo_section',
 			'settings' => 'wp_contactinfo-contact',
 			'priority' => 1

@@ -22,7 +22,7 @@
                     <hr>
                     <div class="contact">
                         <div class="whatsapp">
-                            <a class="btn btn-outline-success">
+                            <a class="btn btn-outline-success" href="https://wa.me/<?php echo get_theme_mod('wp_contactinfo-contact') ?>">
                                 <img src="<?php echo get_template_directory_uri() ?>/assets/logo/whatsapp.png" alt="WhatsApp Icon">
                                 <span>Beli Sekarang</span>
                             </a>
