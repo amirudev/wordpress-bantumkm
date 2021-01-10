@@ -22,7 +22,7 @@
                     <hr>
                     <div class="contact">
                         <div class="whatsapp">
-                            <a class="btn btn-outline-success" href="https://wa.me/<?php echo get_theme_mod('wp_contactinfo-contact') ?>">
+                            <a class="btn btn-outline-success" href="https://wa.me/<?php echo get_theme_mod('wp_contactinfo-contact') ?>?text=<?php echo get_theme_mod('wp_greetingsorder-text') ?>%0D%0A%0D%0A----------Order Pembelian----------%0D%0ANama Produk : <?php the_title(); ?>%0D%0AHarga : Rp<?php echo number_format(get_field('Price')) ?>">
                                 <img src="<?php echo get_template_directory_uri() ?>/assets/logo/whatsapp.png" alt="WhatsApp Icon">
                                 <span>Beli Sekarang</span>
                             </a>
