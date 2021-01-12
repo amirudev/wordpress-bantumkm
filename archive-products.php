@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<div class="products-list">
+<div class="archive-products">
     <div class="container">
         <div class="page-title">
             <div class="row">
