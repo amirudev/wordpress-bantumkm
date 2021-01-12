@@ -190,8 +190,6 @@ footer .dev ul li {
 
 /* Frontpage */
 
-
-
 .grid-container {
 	display: grid;
 	grid-template-columns: 751px auto;
@@ -237,8 +235,22 @@ footer .dev ul li {
 	overflow-y: hidden;
 }
 
+.card {
+	border-radius: 25px;
+	margin: 10px 0;
+}
+
 .card-body {
 	z-index: 2;
+}
+
+.card-blog .card-body {
+	padding-bottom: 320px;
+}
+
+.card-blog .card-footer {
+	position: absolute;
+	bottom: 10px;
 }
 
 .product-container .card {
@@ -280,6 +292,11 @@ footer .dev ul li {
 
 .card-footer {
 	border-radius: 30px;
+}
+
+.card-content .card-footer {
+	padding: 0;
+	border: none;
 }
 
 /* Single Page */
@@ -331,4 +348,9 @@ footer .dev ul li {
 
 .product-headesc .contact span {
 	font-weight: 600;
+}
+
+/* Additional Configuration */
+.no-radius img {
+	border-radius: 0;
 }

@@ -1,2 +1,4 @@
 <?php get_header() ?>
-archive blog
+<?php if(have_posts()) {
+    while
+} ?>
