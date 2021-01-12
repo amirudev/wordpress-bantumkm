@@ -350,6 +350,22 @@ footer .dev ul li {
 	font-weight: 600;
 }
 
+/* Archive Blog */
+
+.button-page {
+	margin: 0 auto;
+	width: 320px;
+}
+
+.button-page a {
+	padding: 20px;
+}
+
+.button-post {
+	width: 265px;
+	margin: 20px auto;
+}
+
 /* Additional Configuration */
 .no-radius img {
 	border-radius: 0;

@@ -1,4 +1,5 @@
-<?php get_header() ?>
+<?php get_header();
+global $wp_query;?>
 <div class="archive-blog">
     <div class="container">
         <div class="page-title">
@@ -7,14 +8,16 @@
         </div>
         <div class="row">
             <?php
-            $blog_query = new WP_Query(
+            $wp_query = new WP_Query(
                 array(
-                    'post_type' => 'blog'
+                    'post_type' => 'blog',
+                    'paged' => get_query_var('paged'),
+                    'posts_per_page' => 6
                 )
             );
-            if($blog_query->have_posts()){
-                while($blog_query->have_posts()) {
-                    $blog_query->the_post(); ?>
+            if($wp_query->have_posts()){
+                while($wp_query->have_posts()) {
+                    $wp_query->the_post(); ?>
                     <div class="col-xl-4 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-content">
@@ -37,6 +40,10 @@
             }
             ?>
         </div>
+    </div>
+    <div class="button-post">
+        <?php previous_posts_link(); ?>
+        <?php next_posts_link(); ?>
     </div>
 </div>
 <?php get_footer(); ?>

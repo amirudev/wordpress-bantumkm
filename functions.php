@@ -142,6 +142,11 @@ function wp_customize_register_greetingsorder($wp_customize) {
 	));
 }
 
+// Bootstrap a button post link
+function post_link_attributes_bootsbutton() {
+	return 'class="btn btn-primary"';
+}
+
 // Customize website functionality
 add_action('wp_enqueue_scripts', 'wp_register_styles');
 add_action('wp_enqueue_scripts', 'wp_register_scripts');
@@ -161,5 +166,9 @@ add_action('customize_register', 'wp_customize_register_greetingsorder');
 // Excerpt Configuration
 add_filter('excerpt_more', function(){
 	return ' ...';
-})
+});
+
+// Applying Bootstrap Button Style post_link
+add_filter('next_posts_link_attributes', 'post_link_attributes_bootsbutton');
+add_filter('previous_posts_link_attributes', 'post_link_attributes_bootsbutton');
 ?>
