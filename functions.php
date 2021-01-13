@@ -147,6 +147,11 @@ function post_link_attributes_bootsbutton() {
 	return 'class="btn btn-primary"';
 }
 
+// Excerpt Limit
+function wp_custom_excerpt_limit($length) {
+	return 20;
+}
+
 // Customize website functionality
 add_action('wp_enqueue_scripts', 'wp_register_styles');
 add_action('wp_enqueue_scripts', 'wp_register_scripts');
@@ -167,6 +172,9 @@ add_action('customize_register', 'wp_customize_register_greetingsorder');
 add_filter('excerpt_more', function(){
 	return ' ...';
 });
+
+// Applying excerpt limit
+add_filter('excerpt_length', 'wp_custom_excerpt_limit');
 
 // Applying Bootstrap Button Style post_link
 add_filter('next_posts_link_attributes', 'post_link_attributes_bootsbutton');

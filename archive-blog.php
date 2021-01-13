@@ -36,7 +36,7 @@ global $wp_query;?>
                         <a href="<?php the_permalink(); ?>" class="btn btn-primary">Baca Selengkapnya</a>
                     </div>
                 </div>
-                <?php }
+                <?php wp_reset_postdata(); }
             }
             ?>
         </div>

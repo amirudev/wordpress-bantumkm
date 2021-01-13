@@ -9,19 +9,25 @@
                 </div>
             </div>
         </div>
+        <div class="col-12">
+            <div class="form-group input-group">
+                <input type="text" class="form-control" id="basicInput" placeholder="Enter product name">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Cari</button>
+            </div>
+        </div>
         <div class="row">        
             <?php
             $productcount = wp_count_posts('products')->publish;
-            $productstart = ceil($productcount / 3);
+            $productstart = ceil($productcount / 4); // Edit here to display post per row
 
             for ($productoffset=0; $productoffset <= $productcount; $productoffset+=$productstart) { ?>
-                <div class="col-xl-4 col-md-6 col-sm-12">
+                <div class="col-xl-3 col-md-4 col-sm-6">
                     <?php
                     $posts_product = new WP_Query(
                         array(
                             'post_type' => 'products',
                             'posts_per_page' => $productstart,
-                            'offset' => $productoffset
+                            'offset' => $productoffset,
                         )
                     );
 
@@ -51,7 +57,7 @@
                                     <a href="<?php the_permalink(); ?>" class="btn btn-success">Beli Sekarang</a>
                                 </div>
                             </div>      
-                        <?php }
+                        <?php wp_reset_postdata(); }
                     } ?>
                 </div>
             <?php } ?>
