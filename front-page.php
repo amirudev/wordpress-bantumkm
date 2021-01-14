@@ -70,7 +70,7 @@
             </div>
         <?php } ?>
 	</div>
-	<section class="card-container">
+	<section class="card-container master-card container">
 		<div class="page-title">
 			<div class="row">
 				<div class="col-10">

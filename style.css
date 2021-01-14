@@ -273,11 +273,6 @@ footer .dev ul li {
 	border-radius: 0px 25px 25px 25px;
 }
 
-.card-container {
-	width: 1250px;
-	margin: 10px auto;
-}
-
 .card-container .card {
 	margin: 10px 0;
 	border-radius: 30px;
@@ -369,4 +364,17 @@ footer .dev ul li {
 /* Additional Configuration */
 .no-radius img {
 	border-radius: 0;
+}
+
+/* Styling for other screen size */
+
+@media only screen and (max-width: 430px) {
+	.master-card {
+		margin-top: 140px;
+	}
+
+	.grid-container {
+		display: inline-block;
+		width: auto;
+	}
 }

@@ -10,10 +10,10 @@
             </div>
         </div>
         <div class="col-12">
-            <div class="form-group input-group">
-                <input type="text" class="form-control" id="basicInput" placeholder="Enter product name">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Cari</button>
-            </div>
+            <form class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ketik Nama Produk Disini" aria-label="Ketik Nama Produk Disini" aria-describedby="button-addon2" name="s">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cari</button>
+            </form>
         </div>
         <div class="row">        
             <?php
@@ -28,6 +28,7 @@
                             'post_type' => 'products',
                             'posts_per_page' => $productstart,
                             'offset' => $productoffset,
+                            's' => get_search_query()
                         )
                     );
 

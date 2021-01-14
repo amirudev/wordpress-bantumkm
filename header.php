@@ -14,7 +14,7 @@
 			<img src="<?php echo get_template_directory_uri() ?>/assets/logo/logo.png">
 			<h2 id="name"><?php echo get_bloginfo() ?></h2>
 		</div>
-		<div class="nav" id="navbar">
+		<div class="nav bg-light" id="navbar">
 			<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
 			<ul>
 				<button id="nav-button-close">
