@@ -368,7 +368,29 @@ footer .dev ul li {
 
 /* Styling for other screen size */
 
+@media only screen and (max-width: 1030px) {
+	.grid-container{
+		width: 1024px;
+		grid-template-columns: 600px auto;
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	.grid-container{
+		width: 768px;
+		grid-template-columns: 450px auto;
+	}
+}
+
 @media only screen and (max-width: 430px) {
+	.product-container {
+		margin-top: 20px;
+	}
+
+	.main-product img {
+		height: 70px;
+	}
+
 	.master-card {
 		margin-top: 140px;
 	}
