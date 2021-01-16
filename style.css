@@ -375,6 +375,7 @@ footer .dev ul li {
 
 /* Styling for other screen size */
 
+/* Laptop Size */
 @media only screen and (max-width: 1030px) {
 	.grid-container{
 		width: 1024px;
@@ -382,20 +383,54 @@ footer .dev ul li {
 	}
 }
 
+/* Tablet Size */
 @media only screen and (max-width: 770px) {
+	body {
+		margin-top: 105px;
+	}
+
 	.grid-container{
 		width: 768px;
 		grid-template-columns: 450px auto;
 	}
+
+	.archive-container {
+		margin-top: 130px;
+	}
 }
 
+/* Mobile Size */
 @media only screen and (max-width: 430px) {
+	body {
+		margin-top: 5px;
+	}
+
+	header .brand {
+		margin-top: 0;
+	}
+
+	.archive-container {
+		margin-top: 45px;
+	}
+
+	div#nav-open {
+		height: 70px;
+	}
+
+	#nav-open button {
+		height: 100%;
+	}
+
 	.product-container {
 		margin-top: 20px;
 	}
 
 	.main-product img {
 		height: 70px;
+	}
+
+	.side-product img {
+		height: 60px;
 	}
 
 	.master-card {

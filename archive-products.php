@@ -3,7 +3,7 @@
     <div class="container">
         <div class="page-title">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12">
                     <h3>Produk</h3>
                     <p class="text-subtitle text-muted">Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.</p>
                 </div>
