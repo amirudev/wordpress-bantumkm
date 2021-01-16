@@ -19,7 +19,7 @@ global $wp_query;?>
                 while($wp_query->have_posts()) {
                     $wp_query->the_post(); ?>
                     <div class="col-xl-4 col-md-6 col-sm-12">
-                    <div class="card">
+                    <div class="card blog">
                         <div class="card-content">
                             <div class="card-body">
                                 <h5 class="card-title"><?php the_title(); ?></h5>
@@ -29,11 +29,13 @@ global $wp_query;?>
                                 </div>
                             </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Dibuat Pada : <?php the_date(); ?></li>
-                            <li class="list-group-item">Author : <?php the_author(); ?> </li>
-                        </ul>
-                        <a href="<?php the_permalink(); ?>" class="btn btn-primary">Baca Selengkapnya</a>
+                        <div class="info">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Dibuat Pada : <?php the_date(); ?></li>
+                                <li class="list-group-item">Author : <?php the_author(); ?> </li>
+                            </ul>
+                            <a href="<?php the_permalink(); ?>" class="btn btn-primary">Baca Selengkapnya</a>
+                        </div>
                     </div>
                 </div>
                 <?php wp_reset_postdata(); }

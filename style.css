@@ -243,6 +243,20 @@ footer .dev ul li {
 	margin: 10px 0;
 }
 
+.blog {
+	height: 510px;
+}
+
+.blog .info {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.blog .info .btn {
+	width: 100%;
+}
+
 .card-body {
 	z-index: 2;
 }
