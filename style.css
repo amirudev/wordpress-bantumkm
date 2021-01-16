@@ -39,11 +39,13 @@ header .brand img {
 	width: 100px;
 	height: 50px;
 	float: left;
+	margin-bottom: 10px;
 }
 
 header .brand #name {
 	float: left;
 	padding-left: 20px;
+	margin-top: 5px;
 }
 
 header .nav {
@@ -137,6 +139,7 @@ footer .dev ul li {
 
 	header .brand #name {
 		padding-top: 12px;
+		margin-top: 10px;
 	}
 
 	header .nav-button {
@@ -196,6 +199,7 @@ footer .dev ul li {
 	width: 1250px;
 	margin: 0 auto;
 	box-sizing: border-box;
+	margin-bottom: 30px;
 }
 
 .main-product {
@@ -358,6 +362,10 @@ footer .dev ul li {
 .button-post {
 	width: 265px;
 	margin: 20px auto;
+}
+
+.archive-container {
+	margin-top: 150px;
 }
 
 /* Additional Configuration */

@@ -1,6 +1,6 @@
 <?php get_header();
 global $wp_query;?>
-<div class="archive-blog">
+<div class="archive-container">
     <div class="container">
         <div class="page-title">
             <h3>Blog</h3>

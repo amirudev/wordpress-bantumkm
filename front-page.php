@@ -122,7 +122,7 @@
             <?php } ?>
         </div>
     </section>
-    <section class="card-container">
+    <section class="card-container container">
         <div class="page-title">
             <div class="row">
                 <div class="col-10">
