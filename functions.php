@@ -14,6 +14,10 @@ function wp_register_scripts() {
 function wp_theme_support() {
 	add_theme_support('title-tag');
 	add_theme_support('post-thumbnails');
+	add_theme_support('custom-logo', array(
+		'height' => 100,
+		'width' => 50
+	));
 }
 
 // Custom Post Type Product

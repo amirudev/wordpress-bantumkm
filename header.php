@@ -11,7 +11,11 @@
 <body>
 	<header>
 		<div class="brand">
-			<img src="<?php echo get_template_directory_uri() ?>/assets/logo/logo.png">
+			<?php
+			function_exists('the_custom_logo') {
+				the_custom_logo()
+			}
+			?>
 			<h2 id="name"><?php echo get_bloginfo() ?></h2>
 		</div>
 		<div class="nav bg-light" id="navbar">
