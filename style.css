@@ -15,7 +15,7 @@ Text Domain: BantuUMKM;
 body {
 	font-family: Raleway, sans-serif;
 	background-color: rgb(240, 240, 240);
-	margin-top: 120px;
+	margin-top: 130px;
 	/*background-color: white;*/
 }
 
@@ -253,31 +253,8 @@ footer .dev ul li {
 	margin: 10px 0;
 }
 
-.blog {
-	height: 510px;
-}
-
-.blog .info {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-}
-
-.blog .info .btn {
-	width: 100%;
-}
-
 .card-body {
 	z-index: 2;
-}
-
-.card-blog .card-body {
-	padding-bottom: 320px;
-}
-
-.card-blog .card-footer {
-	position: absolute;
-	bottom: 10px;
 }
 
 .product-container .card {
@@ -309,86 +286,57 @@ footer .dev ul li {
 	font-size: 14px;
 }
 
-.card-container {
-	padding: 0;
-	margin-bottom: 20px;
+.product-container {
+	margin: 50px;
 }
 
-.card-container .card {
-	margin: 25px 0;
-	border-radius: 30px;
-	padding: 0;
+.product-container .page-title h3 {
+	font-size: 22px;
+	font-weight: 600;
+	font-family: Tahoma, sans-serif;
 }
 
-.card-image img {
-	width: 100%;
-	max-height: 200px;
-	object-fit: cover;
-	border-radius: 25px 25px 0 0;
-}
-
-.card-footer {
-	border-radius: 30px;
-}
-
-.card-content .card-footer {
-	padding: 0;
-	border: none;
-}
-
-.card-footer span {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Single Page */
-
-.product-description {
-	margin: 0 auto;
-}
-
-.product-description .card {
-	padding: 20px;
-}
-
-.product-description .card .product-image img {
-	width: 100%;
-	object-fit: cover;
-	height: 300px;
-}
-
-.product-description .product-headesc {
-	padding: 20px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.product-description .product-headesc .title {
-	font-size: 25px;
-	font-weight: 400;
-}
-
-.product-description .product-headesc .price {
-	font-size: 25px;
+.product-container .page-title h3 span {
+	font-size: 17px;
 	font-weight: 600;
 }
 
-.product-description .icon-store {
-	width: 25px;
+.product-container .product {
+	font-family: Tahoma, sans-serif;
+	background-color: white;
+	border-radius: 10px;
+	color: #555555;
+	margin: 5px;
 }
 
-.product-description .seller-name {
-	padding: 10px;
+.product-container .product .badge {
+	background-color: rgb(200, 255, 255)!important;
+	color: green;
 }
 
-.product-headesc .contact .btn {
+.product-container .product .product-image img {
+	height: 150px;
 	width: 100%;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
 }
 
-.product-headesc .contact img {
-	float: left;
+.product-container .product .product-info {
+	padding: 5px 10px 20px;
+	font-size: 0.88rem;
 }
 
-.product-headesc .contact span {
-	font-weight: 600;
+.product-container .product .product-price {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: black;
+}
+
+.blog .blog-image img {
+	height: 150px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 25px;
 }
 
 /* Archive Blog */

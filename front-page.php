@@ -70,106 +70,272 @@
             </div>
         <?php } ?>
 	</div>
-	<section class="card-container master-card container">
-		<div class="page-title">
-			<div class="row">
-				<div class="col-10">
-					<h3>Products</h3>
-					<p class="text-subtitle text-muted">Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.</p>
-				</div>
-			</div>
-		</div>
-        <?php 
-        $display_col = 4; // Configuration
-        $display_row = 3;
-        ?>
-        <div class="row frontpage-display">
-            <?php for ($display_offset=0; 
-            $display_offset <= $display_col * ( $display_row - 1 ) + ( $display_col - $display_row); 
-            $display_offset += $display_row) { ?>
-                <div class="col-xl-<?php echo 12 / $display_col ?> col-md-6 col-sm-12">
-                    <?php 
-                    $posts_product = new WP_Query(
-                        array(
-                            'post_type' => 'products',
-                            'posts_per_page' => $display_row,
-                            'offset' => $display_offset,
-                        )
-                    );
-                    if($posts_product->have_posts()) {
-                        while($posts_product->have_posts()) {
-                            $posts_product->the_post(); ?>
-                            <div class="card">
-                                <div class="card-content">
-                                    <div class="card-image">
-                                        <?php the_post_thumbnail(); ?>
-                                    </div>
-                                    <div class="card-body">
-                                        <h4 class="card-title" id="<?php the_ID(); ?>"><?php the_title(); ?></h4>
-                                        <p class="card-text">
-                                            <?php the_excerpt(); ?>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between">
-                                    <span><?php
-                                    if(get_field('Price')):
-                                        echo 'Rp' . number_format(get_field('Price'));
-                                    else:
-                                        echo 'Free';
-                                    endif;
-                                    ?></span>
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-success">Beli Sekarang</a>
-                                </div>
-                            </div>
-                        <?php }
-                    } ?>
-                </div>
-            <?php } ?>
-        </div>
-    </section>
-    <section class="card-container container">
+    <section class="product-container">
         <div class="page-title">
             <div class="row">
-                <div class="col-10">
-                    <h3>Blog</h3>
-                    <p class="text-subtitle text-muted">Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.</p>
+                <div class="col-12">
+                    <h3>Produk Terbaru <span>Lihat Semua</span></h3>
                 </div>
             </div>
         </div>
         <div class="row">
-        <?php $posts_blog = new WP_Query(
-            array(
-                'post_type' => 'blog',
-                'posts_per_page' => 6,
-                'offset' => 0
-            )
-        );
-        if ($posts_blog->have_posts()) {
-            while($posts_blog->have_posts()) {
-                $posts_blog->the_post(); ?>
-                <div class="col-xl-4 col-md-6 col-sm-12">
-                    <div class="card blog">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php the_title(); ?></h5>
-                                <p class="card-text"><?php the_excerpt(); ?></p>
-                                <div class="card-image no-radius">
-                                    <?php the_post_thumbnail(); ?>
-                                </div>
-                            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Mock Start -->
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-xl-2">
+                <div class="product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+                    </div>
+                    <div class="product-price">
+                        <span>Rp19.000</span>
+                    </div>
+                    <div class="product-badge">
+                        <span class="badge bg-success">Grosir</span>
+                    </div>
+                    <div class="product-addr">
+                        <span>Jakarta</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Mock End -->
+        </div>
+    </section>
+    <section class="product-container">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Blog Terbaru <span>Lihat Semua</span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 blog">
+            <div class="card bg-lighten-1">
+                <div class="card-content">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 col-md-12 blog-image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                         </div>
-                        <div class="info">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Dibuat Pada : <?php the_date(); ?></li>
-                                <li class="list-group-item">Author : <?php the_author(); ?> </li>
-                            </ul>
-                            <a href="<?php the_permalink(); ?>" class="btn btn-primary">Baca Selengkapnya</a>
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card-body">
+                                <h4 class="card-title white">Oraimo merilis masker baru</h4>
+                                <p class="card-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                <button class="btn btn-secondary">Baca selengkapnya</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            <?php }
-        } ?>
+            </div>
         </div>
+        <!-- Mock Start -->
+        <div class="col-12 blog">
+            <div class="card bg-lighten-1">
+                <div class="card-content">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 col-md-12 blog-image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                        </div>
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card-body">
+                                <h4 class="card-title white">Oraimo merilis masker baru</h4>
+                                <p class="card-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                <button class="btn btn-secondary">Baca selengkapnya</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 blog">
+            <div class="card bg-lighten-1">
+                <div class="card-content">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4 col-md-12 blog-image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                        </div>
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card-body">
+                                <h4 class="card-title white">Oraimo merilis masker baru</h4>
+                                <p class="card-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                                <button class="btn btn-secondary">Baca selengkapnya</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mock End -->
     </section>
 <?php get_footer(); ?>
