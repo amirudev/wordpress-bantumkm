@@ -79,14 +79,20 @@
 				</div>
 			</div>
 		</div>
+        <?php 
+        $display_col = 4; // Configuration
+        $display_row = 2;
+        ?>
         <div class="row">
-            <?php for ($display_offset=0; $display_offset <= 6; $display_offset += 3) { ?>
-                <div class="col-xl-4 col-md-6 col-sm-12">
+            <?php for ($display_offset=0; 
+            $display_offset <= $display_col * ( $display_row - 1 ) + ( $display_col - $display_row); 
+            $display_offset += $display_row) { ?>
+                <div class="col-xl-<?php echo 12 / $display_col ?> col-md-6 col-sm-12">
                     <?php 
                     $posts_product = new WP_Query(
                         array(
                             'post_type' => 'products',
-                            'posts_per_page' => 3,
+                            'posts_per_page' => $display_row,
                             'offset' => $display_offset,
                         )
                     );

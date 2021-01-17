@@ -290,9 +290,14 @@ footer .dev ul li {
 	border-radius: 0px 25px 25px 25px;
 }
 
+.card-container {
+	padding: 0;
+}
+
 .card-container .card {
-	margin: 10px 0;
+	margin: 25px 0;
 	border-radius: 30px;
+	padding: 0;
 }
 
 .card-image img {
@@ -309,6 +314,10 @@ footer .dev ul li {
 .card-content .card-footer {
 	padding: 0;
 	border: none;
+}
+
+.card-footer span {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Single Page */
