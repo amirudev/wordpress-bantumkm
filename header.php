@@ -20,6 +20,9 @@
 		</div>
 		<div class="nav bg-light" id="navbar">
 			<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
+			<div class="cart">
+				<p>3 Items - Rp47.000</p>
+			</div>
 			<ul>
 				<button id="nav-button-close">
 					<li>X</li>

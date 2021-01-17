@@ -81,9 +81,9 @@
 		</div>
         <?php 
         $display_col = 4; // Configuration
-        $display_row = 2;
+        $display_row = 3;
         ?>
-        <div class="row">
+        <div class="row frontpage-display">
             <?php for ($display_offset=0; 
             $display_offset <= $display_col * ( $display_row - 1 ) + ( $display_col - $display_row); 
             $display_offset += $display_row) { ?>

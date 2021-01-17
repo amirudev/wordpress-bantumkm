@@ -79,6 +79,16 @@ header .nav ul button {
 header .nav-button {
 	display: none;
 }
+
+header .cart {
+	position: absolute;
+	right: 0;
+}
+
+header .cart p {
+	margin: 20px;
+}
+
 /* Footer */
 
 footer {
@@ -199,7 +209,7 @@ footer .dev ul li {
 	width: 1250px;
 	margin: 0 auto;
 	box-sizing: border-box;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 
 .main-product {
@@ -290,8 +300,18 @@ footer .dev ul li {
 	border-radius: 0px 25px 25px 25px;
 }
 
+.frontpage-display .card .card-body .card-title {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.frontpage-display .card .card-body p {
+	font-size: 14px;
+}
+
 .card-container {
 	padding: 0;
+	margin-bottom: 20px;
 }
 
 .card-container .card {
