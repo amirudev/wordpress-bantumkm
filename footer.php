@@ -11,7 +11,7 @@
 				Support me by follow these account !
 				Keep this and your karma will be +10
 			 -->
-			<p>Designed by : Wahyu Amirulloh</p>
+			<p>Coded by : Wahyu Amirulloh</p>
 			<p>Contact Me</p>
 			<ul>
 				<a href="#">

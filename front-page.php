@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="grid-container product-container display-container d-flex justify-content-center">
+    <div class="grid-container product-container display-container d-flex justify-content-between col-11">
         <?php
         $posts_product_A = new WP_Query(
             array(
@@ -23,7 +23,7 @@
                 </div>
             </div>
         <?php } ?>
-        <div class="col-4">
+        <div class="col-6">
             <?php
             $posts_product_B = new WP_Query(
                 array(

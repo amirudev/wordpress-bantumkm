@@ -215,7 +215,7 @@ footer .dev ul li {
 	/* grid-row: 1 / 3; */
 	position: relative;
 	margin-right: 10px;
-	height: 102%;
+	height: 105%;
 }
 
 .main-product-image {
@@ -233,7 +233,7 @@ footer .dev ul li {
 
 .side-product {
 	height: 50%;
-	margin-bottom: 10px;
+	margin: 0 0 24px 24px;
 }
 
 .side-product-image {
@@ -262,6 +262,10 @@ footer .dev ul li {
 	z-index: 2;
 }
 
+.product-container {
+	margin: 50px auto;
+}
+
 .product-container .card {
 	padding-bottom: 40px;
 	height: 100%;
@@ -280,19 +284,6 @@ footer .dev ul li {
 
 .product-container #card-3 {
 	border-radius: 0px 25px 25px 25px;
-}
-
-.frontpage-display .card .card-body .card-title {
-	font-size: 16px;
-	font-weight: 600;
-}
-
-.frontpage-display .card .card-body p {
-	font-size: 14px;
-}
-
-.product-container {
-	margin: 30px auto;
 }
 
 .product-container .page-title h3 {
@@ -338,12 +329,21 @@ footer .dev ul li {
 	color: black;
 }
 
+.frontpage-display .card .card-body .card-title {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.frontpage-display .card .card-body p {
+	font-size: 14px;
+}
+
 .display-container {
-	margin: 0;
+	margin: 0 auto;
 }
 
 .blog {
-	margin: 10px auto;
+	margin: 20px auto;
 }
 
 .blog .blog-image img {
@@ -381,12 +381,6 @@ footer .dev ul li {
 /* Styling for other screen size */
 
 /* Laptop Size */
-@media only screen and (max-width: 1030px) {
-	.grid-container{
-		width: 1024px;
-		grid-template-columns: 600px auto;
-	}
-}
 
 /* Tablet Size */
 @media only screen and (max-width: 770px) {
