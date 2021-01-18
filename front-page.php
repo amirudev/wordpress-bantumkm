@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="grid-container product-container">
+    <div class="grid-container product-container display-container d-flex justify-content-center">
         <?php
         $posts_product_A = new WP_Query(
             array(
@@ -10,7 +10,7 @@
         );
         if($posts_product_A->have_posts()) {
             $posts_product_A->the_post(); ?>
-            <div class="main-product">
+            <div class="main-product col-6">
                 <div class="card" id="card-1">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_title(); ?></h5>
@@ -23,54 +23,56 @@
                 </div>
             </div>
         <?php } ?>
-        <?php
-        $posts_product_B = new WP_Query(
-            array(
-                'post_type' => 'products',
-                'posts_per_page' => 1,
-                'offset' => 1
-            )
-        );
-        if($posts_product_B->have_posts()) {
-            $posts_product_B->the_post();?>
-            <div class="side-product">
-                <div class="card" id="card-2">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php the_title(); ?></h5>
-                        <div class="card-text"><?php the_excerpt(); ?></div>
-                        <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
-                    </div>
-                    <div class="side-product-image">
-                        <?php the_post_thumbnail(); ?>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
-        <?php
-        $posts_product_C = new WP_Query(
-            array(
-                'post_type' => 'products',
-                'posts_per_page' => 1,
-                'offset' => 2
-            )
-        );
-        if($posts_product_C->have_posts()) {
-            $posts_product_C->the_post(); ?>
-            <div class="side-product">
-                <div class="card" id="card-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php the_title(); ?></h5>
-                        <div class="card-text"><?php the_excerpt(); ?></div>
-                        <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
-                    </div>
-                    <div class="side-product-image">
-                        <?php the_post_thumbnail(); ?>
+        <div class="col-4">
+            <?php
+            $posts_product_B = new WP_Query(
+                array(
+                    'post_type' => 'products',
+                    'posts_per_page' => 1,
+                    'offset' => 1
+                )
+            );
+            if($posts_product_B->have_posts()) {
+                $posts_product_B->the_post();?>
+                <div class="side-product">
+                    <div class="card" id="card-2">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <div class="card-text"><?php the_excerpt(); ?></div>
+                            <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                        <div class="side-product-image">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
+            <?php
+            $posts_product_C = new WP_Query(
+                array(
+                    'post_type' => 'products',
+                    'posts_per_page' => 1,
+                    'offset' => 2
+                )
+            );
+            if($posts_product_C->have_posts()) {
+                $posts_product_C->the_post(); ?>
+                <div class="side-product">
+                    <div class="card" id="card-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <div class="card-text"><?php the_excerpt(); ?></div>
+                            <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                        <div class="side-product-image">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
 	</div>
-    <section class="product-container">
+    <section class="product-container col-11">
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
@@ -78,8 +80,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="product col-xl-2">
+        <div class="row justify-content-around">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -99,7 +101,7 @@
                 </div>
             </div>
             <!-- Mock Start -->
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -118,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -137,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -156,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -175,7 +177,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -194,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -213,7 +215,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -232,7 +234,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -251,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2">
+            <div class="product col-xl-2 col-sm-3 col-5">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -273,7 +275,7 @@
             <!-- Mock End -->
         </div>
     </section>
-    <section class="product-container">
+    <section class="product-container col-11">
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
