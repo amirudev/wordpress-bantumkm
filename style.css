@@ -187,14 +187,14 @@ footer .dev ul li {
 		text-align: center;
 		padding: 20px 0;
 	}
-
+	
 	header .nav ul button {
 		background-color: white;
 		border: none;
 		width: 100%;
 		padding: 0;
 	}
-
+	
 	body {
 		margin-top: 50px;
 	}
@@ -202,9 +202,8 @@ footer .dev ul li {
 
 /* Frontpage */
 
-.grid-container {
-	/* display: grid;
-	grid-template-columns: 751px auto; */
+.display-container {
+	margin: 0 auto;
 	height: 440px;
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -256,10 +255,17 @@ footer .dev ul li {
 
 .card {
 	border-radius: 25px;
+	margin-bottom: 20px;
 }
 
 .card-body {
 	z-index: 2;
+}
+
+.card .card-content .card-image img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
 }
 
 .product-container {
@@ -338,9 +344,6 @@ footer .dev ul li {
 	font-size: 14px;
 }
 
-.display-container {
-	margin: 0 auto;
-}
 
 .blog {
 	margin: 20px auto;
@@ -388,11 +391,6 @@ footer .dev ul li {
 		margin-top: 105px;
 	}
 
-	.grid-container{
-		width: 768px;
-		grid-template-columns: 450px auto;
-	}
-
 	.archive-container {
 		margin-top: 130px;
 	}
@@ -420,24 +418,32 @@ footer .dev ul li {
 		height: 100%;
 	}
 
+	.display-container {
+		display: inline-block!important;
+		width: 100%;
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	.display-container .main-product {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.display-container .main-product {
+		height: 90%;
+	}
+
+	.display-container .main-product-image img {
+		height: 215px;
+		border-radius: 0 0 25px 25px;
+	}
+
 	.product-container {
-		margin-top: 20px;
+		margin-top: 0;
 	}
 
-	.main-product img {
-		height: 70px;
-	}
-
-	.side-product img {
-		height: 60px;
-	}
-
-	.master-card {
-		margin-top: 140px;
-	}
-
-	.grid-container {
-		display: inline-block;
-		width: auto;
+	.side-product {
+		display: none;
 	}
 }

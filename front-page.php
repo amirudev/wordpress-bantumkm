@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="grid-container product-container display-container d-flex justify-content-between col-11">
+    <div class="product-container display-container d-flex justify-content-between col-11">
         <?php
         $posts_product_A = new WP_Query(
             array(
@@ -10,7 +10,7 @@
         );
         if($posts_product_A->have_posts()) {
             $posts_product_A->the_post(); ?>
-            <div class="main-product col-6">
+            <div class="main-product col-md-6 col-12">
                 <div class="card" id="card-1">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_title(); ?></h5>
@@ -34,7 +34,7 @@
             );
             if($posts_product_B->have_posts()) {
                 $posts_product_B->the_post();?>
-                <div class="side-product">
+                <div class="side-product col-12">
                     <div class="card" id="card-2">
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
@@ -57,7 +57,7 @@
             );
             if($posts_product_C->have_posts()) {
                 $posts_product_C->the_post(); ?>
-                <div class="side-product">
+                <div class="side-product col-12">
                     <div class="card" id="card-3">
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
@@ -76,12 +76,12 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
-                    <h3>Produk Terbaru <span>Lihat Semua</span></h3>
+                    <h3>Produk Terbaru <span><a href="#">Lihat Semua</a></span></h3>
                 </div>
             </div>
         </div>
         <div class="row justify-content-around">
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <!-- Mock Start -->
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -177,7 +177,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -215,7 +215,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -234,7 +234,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -253,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product col-xl-2 col-sm-3 col-5">
+            <div class="product col-xl-2 col-sm-3 col-5 shadow">
                 <div class="product-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                 </div>
@@ -279,11 +279,11 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
-                    <h3>Blog Terbaru <span>Lihat Semua</span></h3>
+                    <h3>Blog Terbaru <span><a href="#">Lihat Semua</a></span></h3>
                 </div>
             </div>
         </div>
-        <div class="col-12 blog">
+        <div class="col-12 blog shadow">
             <div class="card bg-lighten-1">
                 <div class="card-content">
                     <div class="row no-gutters">
@@ -302,7 +302,7 @@
             </div>
         </div>
         <!-- Mock Start -->
-        <div class="col-12 blog">
+        <div class="col-12 blog shadow">
             <div class="card bg-lighten-1">
                 <div class="card-content">
                     <div class="row no-gutters">
@@ -320,7 +320,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 blog">
+        <div class="col-12 blog shadow">
             <div class="card bg-lighten-1">
                 <div class="card-content">
                     <div class="row no-gutters">
