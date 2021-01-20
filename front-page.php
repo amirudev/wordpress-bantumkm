@@ -110,9 +110,12 @@
                                 </span>
                             </div>
                             <div class="product-badge" style="float: left">
-                                <span class="badge bg-success">Gratis Ongkir</span>
+                                <?php foreach(get_field_object('promo_field')['value'] as $promo){
+                                    echo '<span class="badge bg-success">' . $promo . '</span>';
+                                } ?>
+                                <!-- <span class="badge bg-success">Gratis Ongkir</span>
                                 <span class="badge bg-warning">Cashback</span>
-                                <span class="badge bg-danger">Bayar Di Tempat</span>
+                                <span class="badge bg-danger">Bayar Di Tempat</span> -->
                             </div>
                             <div class="product-addr">
                                 <span>Jakarta</span>

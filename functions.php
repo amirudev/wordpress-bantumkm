@@ -109,6 +109,7 @@ if( function_exists('acf_add_local_field_group') ){
 			'cashback' => 'Cashback',
 			'cod' => 'Bayar di Tempat',
 		),
+		'return_format' => 'value',
 		'parent' => 'product_group'
 	));
 }
