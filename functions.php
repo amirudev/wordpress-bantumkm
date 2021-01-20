@@ -75,16 +75,8 @@ function wp_custom_post_type_blog() {
 if( function_exists('acf_add_local_field_group') ){
 	acf_add_local_field_group(
 		array(
-			'key' => 'price_group',
-			'title' => 'Price',
-			'fields' => array(
-				array(
-					'key' => 'price_field',
-					'label' => 'Harga',
-					'name' => 'Price',
-					'type' => 'number'
-				)
-			),
+			'key' => 'product_group',
+			'title' => 'Pengaturan Produk',
 			'location' => array(
 				array(
 					array(
@@ -94,9 +86,33 @@ if( function_exists('acf_add_local_field_group') ){
 					),
 				),
 			),
-		)
+		),
 	);
+
+	// Product Price ACF
+	acf_add_local_field(array(
+		'key' => 'price_field',
+		'label' => 'Harga',
+		'name' => 'price',
+		'type' => 'number',
+		'parent' => 'product_group'
+	));
+
+	// Product Promo ACF
+	acf_add_local_field(array(
+		'key' => 'promo_field',
+		'label' => 'Promosi Produk',
+		'name' => 'promo',
+		'type' => 'checkbox',
+		'choices' => array(
+			'gratisongkir' => 'Gratis Ongkir',
+			'cashback' => 'Cashback',
+			'cod' => 'Bayar di Tempat',
+		),
+		'parent' => 'product_group'
+	));
 }
+
 
 // Navigation Menu
 function register_my_menus(){

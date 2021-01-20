@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="product-container display-container d-flex justify-content-between col-11">
+    <div class="product-container display-container d-flex justify-content-center col-11">
         <?php
         $posts_product_A = new WP_Query(
             array(
@@ -81,263 +81,86 @@
             </div>
         </div>
         <div class="row justify-content-around">
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+            <?php
+            $display_product = new WP_Query(
+                array(
+                'post_type' => 'products',
+                'posts_per_page' => 10,
+                'offset' => 0
+                )
+            );
+            if($display_product->have_posts()) {
+                while($display_product->have_posts()) {
+                    $display_product->the_post(); ?>
+                    <div class="product col-xl-2 col-sm-3 col-5 shadow">
+                        <div class="product-image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-title">
+                                <span><?php echo get_the_title(); ?></span>
+                            </div>
+                            <div class="product-price">
+                                <span><?php print_r(acf_get_local_field('price_field')); ?></span>
+                            </div>
+                            <div class="product-badge" style="float: left">
+                                <span class="badge bg-success">Gratis Ongkir</span>
+                                <span class="badge bg-warning">Cashback</span>
+                                <span class="badge bg-danger">Bayar Di Tempat</span>
+                            </div>
+                            <div class="product-addr">
+                                <span>Jakarta</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Mock Start -->
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Mock End -->
+                <?php }
+            }
+            ?>
         </div>
     </section>
     <section class="product-container col-11">
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
-                    <h3>Blog Terbaru <span><a href="#">Lihat Semua</a></span></h3>
+                    <h3>Produk Terbaru <span><a href="#">Lihat Semua</a></span></h3>
                 </div>
             </div>
         </div>
-        <div class="col-12 blog shadow">
-            <div class="card bg-lighten-1">
-                <div class="card-content">
-                    <div class="row no-gutters">
-                        <div class="col-lg-4 col-md-12 blog-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                        </div>
-                        <div class="col-lg-8 col-md-12">
-                            <div class="card-body">
-                                <h4 class="card-title white">Oraimo merilis masker baru</h4>
-                                <p class="card-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                                <button class="btn btn-secondary">Baca selengkapnya</button>
-                            </div>
-                        </div>
+        <div class="row blog">
+            <div class="col-12 card blog p-3">
+                <div class="m-3 pb-4 row">
+                    <div class="col-sm-3 blog-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3 class="card-title">Oraimo Merilis Masker Baru</h3>
+                        <p class="card-text">Jelly-o sesame snaps cheesecake topping. Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar muffin. Dessert bonbon caramels brownie chocolate bar chocolate tart dragée.
+                        Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar muffin.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Mock Start -->
-        <div class="col-12 blog shadow">
-            <div class="card bg-lighten-1">
-                <div class="card-content">
-                    <div class="row no-gutters">
-                        <div class="col-lg-4 col-md-12 blog-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                        </div>
-                        <div class="col-lg-8 col-md-12">
-                            <div class="card-body">
-                                <h4 class="card-title white">Oraimo merilis masker baru</h4>
-                                <p class="card-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                                <button class="btn btn-secondary">Baca selengkapnya</button>
-                            </div>
-                        </div>
+                <!-- Mock Start -->
+                <div class="m-3 pb-4 row">
+                    <div class="col-sm-3 blog-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3 class="card-title">Oraimo Merilis Masker Baru</h3>
+                        <p class="card-text">Jelly-o sesame snaps cheesecake topping. Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar muffin. Dessert bonbon caramels brownie chocolate bar chocolate tart dragée.
+                        Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar muffin.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-12 blog shadow">
-            <div class="card bg-lighten-1">
-                <div class="card-content">
-                    <div class="row no-gutters">
-                        <div class="col-lg-4 col-md-12 blog-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                        </div>
-                        <div class="col-lg-8 col-md-12">
-                            <div class="card-body">
-                                <h4 class="card-title white">Oraimo merilis masker baru</h4>
-                                <p class="card-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                                <button class="btn btn-secondary">Baca selengkapnya</button>
-                            </div>
-                        </div>
+                <div class="m-3 pb-4 row">
+                    <div class="col-sm-3 blog-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <h3 class="card-title">Oraimo Merilis Masker Baru</h3>
+                        <p class="card-text">Jelly-o sesame snaps cheesecake topping. Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar muffin. Dessert bonbon caramels brownie chocolate bar chocolate tart dragée.
+                        Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar muffin.</p>
                     </div>
                 </div>
+                <!-- Mock End -->
             </div>
         </div>
-        <!-- Mock End -->
     </section>
 <?php get_footer(); ?>
