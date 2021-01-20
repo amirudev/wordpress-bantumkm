@@ -101,7 +101,13 @@
                                 <span><?php echo get_the_title(); ?></span>
                             </div>
                             <div class="product-price">
-                                <span><?php print_r(acf_get_local_field('price_field')); ?></span>
+                                <span>
+                                <?php if(get_field_object('price_field')['value']){
+                                    echo 'Rp' . number_format(get_field_object('price_field')['value']);
+                                } else {
+                                    echo 'Gratis';
+                                } ?>
+                                </span>
                             </div>
                             <div class="product-badge" style="float: left">
                                 <span class="badge bg-success">Gratis Ongkir</span>

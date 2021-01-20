@@ -95,7 +95,7 @@ if( function_exists('acf_add_local_field_group') ){
 		'label' => 'Harga',
 		'name' => 'price',
 		'type' => 'number',
-		'parent' => 'product_group'
+		'parent' => 'product_group',
 	));
 
 	// Product Promo ACF
