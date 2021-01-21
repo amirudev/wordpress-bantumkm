@@ -85,14 +85,14 @@
             $display_product = new WP_Query(
                 array(
                 'post_type' => 'products',
-                'posts_per_page' => 10,
+                'posts_per_page' => 5,
                 'offset' => 0
                 )
             );
             if($display_product->have_posts()) {
                 while($display_product->have_posts()) {
                     $display_product->the_post(); ?>
-                    <div class="product col-xl-2 col-sm-3 col-5 shadow">
+                    <div class="product col-xl-2 col-sm-3 col-5 shadow" id="<?php the_id(); ?>">
                         <div class="product-image">
                             <?php if(has_post_thumbnail()){
                                 echo the_post_thumbnail();
@@ -119,7 +119,14 @@
                                 } ?>
                             </div>
                             <div class="product-addr">
-                                <span>Jakarta</span>
+                                <span>
+                                    <?php $shipped = get_field_object('shipped_field')['value']; 
+                                        if($shipped){
+                                            echo $shipped;
+                                        } else {
+                                            echo 'Indonesia';
+                                        }?>
+                                </span>
                             </div>
                         </div>
                     </div>

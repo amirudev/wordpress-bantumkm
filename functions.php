@@ -112,6 +112,15 @@ if( function_exists('acf_add_local_field_group') ){
 		'return_format' => 'label',
 		'parent' => 'product_group'
 	));
+
+	// Product Shipped From ACF
+	acf_add_local_field(array(
+		'key' => 'shipped_field',
+		'label' => 'Dikirim Dari',
+		'name' => 'shipped',
+		'type' => 'text',
+		'parent' => 'product_group',
+	));
 }
 
 
