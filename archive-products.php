@@ -1,6 +1,6 @@
 <?php get_header() ?>
 <div class="archive-container">
-    <div class="product-container container">
+    <div class="product-container col-11">
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
@@ -15,199 +15,56 @@
                 <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cari</button>
             </form>
         </div>
-        <div class="row justify-content-between">        
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
+        <div class="row justify-content-between">
+            <?php
+            $product = new WP_Query(
+                array(
+                    'post_type' => 'products',
+                    'posts_per_page' => 20,
+                    'offset' => 0
+                )
+            );
+
+            if($product->have_posts()) {
+                while($product->have_posts()) {
+                    $product->the_post(); ?>
+                <div class="product col-xl-2 col-sm-3 col-5 shadow">
+                    <div class="product-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
                     </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Mock start -->
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
+                    <div class="product-info">
+                        <div class="product-title">
+                            <span><?php the_title(); ?></span>
+                        </div>
+                        <div class="product-price">
+                            <span>
+                            <?php if(get_field_object('price_field')['value']){
+                                echo 'Rp' . number_format(get_field_object('price_field')['value']);
+                            } else {
+                                echo 'Gratis';
+                            } ?>
+                            </span>
+                        </div>
+                        <div class="product-badge" style="float: left">
+                            <?php foreach(get_field_object('promo_field')['value'] as $promo){
+                                echo '<span class="badge bg-success">' . $promo . '</span> ';
+                            } ?>
+                        </div>
+                        <div class="product-addr">
+                            <span>
+                                <?php $shipped = get_field_object('shipped_field')['value']; 
+                                    if($shipped){
+                                        echo $shipped;
+                                    } else {
+                                        echo 'Indonesia';
+                                    }?>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <div class="product col-xl-2 col-sm-3 col-5 shadow">
-                <div class="product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span>Oraimo Bundle 3pcs Kabel Data Micro USB Fast Charging Cable OCD-M29N</span>
-                    </div>
-                    <div class="product-price">
-                        <span>Rp19.000</span>
-                    </div>
-                    <div class="product-badge">
-                        <span class="badge bg-success">Grosir</span>
-                    </div>
-                    <div class="product-addr">
-                        <span>Jakarta</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Mock end -->
+                <?php }
+            }
+            ?>
         </div>
     </div>
 </div>

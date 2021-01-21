@@ -3,8 +3,12 @@ global $wp_query;?>
 <div class="archive-container">
     <div class="container">
         <div class="page-title">
-            <h3>Blog</h3>
-            <div class="text-subtitle text-muted">Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.</div>
+            <div class="row">
+                <div class="col-12">
+                    <h3>Blog Dan Berita</h3>
+                    <p class="text-subtitle text-muted">Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.</p>
+                </div>
+            </div>
         </div>
         <div class="row blog">
             <div class="col-12 card blog p-3">

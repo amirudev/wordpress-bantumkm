@@ -139,7 +139,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
-                    <h3>Produk Terbaru <span><a href="#">Lihat Semua</a></span></h3>
+                    <h3>Blog Terbaru <span><a href="#">Lihat Semua</a></span></h3>
                 </div>
             </div>
         </div>
