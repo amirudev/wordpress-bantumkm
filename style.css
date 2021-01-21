@@ -291,22 +291,12 @@ footer .dev ul li {
 	border-radius: 10px;
 	color: #555555;
 	margin: 5px 5px 20px;
-	padding: 10px;
+	padding: 3px;
 }
 
 .product-container .product .bg-success {
 	background-color: rgb(200, 255, 255)!important;
 	color: green;
-}
-
-.product-container .product .bg-danger {
-	background-color: rgb(200, 230, 255)!important;
-	color: blue;
-}
-
-.product-container .product .bg-warning {
-	background-color: rgb(255, 200, 200)!important;
-	color: red;
 }
 
 .product-container .product .product-image img {
@@ -460,5 +450,9 @@ footer .dev ul li {
 
 	.side-product {
 		display: none;
+	}
+
+	.product-container .product {
+		height: 340px;
 	}
 }

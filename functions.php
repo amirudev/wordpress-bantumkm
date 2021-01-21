@@ -105,11 +105,11 @@ if( function_exists('acf_add_local_field_group') ){
 		'name' => 'promo',
 		'type' => 'checkbox',
 		'choices' => array(
-			'gratisongkir' => 'Gratis Ongkir',
-			'cashback' => 'Cashback',
-			'cod' => 'Bayar di Tempat',
+			'gratisongkir' => '🚚 Gratis Ongkir',
+			'cashback' => '💰 Cashback',
+			'cod' => '💵 Bayar di Tempat',
 		),
-		'return_format' => 'value',
+		'return_format' => 'label',
 		'parent' => 'product_group'
 	));
 }

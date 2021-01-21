@@ -94,7 +94,11 @@
                     $display_product->the_post(); ?>
                     <div class="product col-xl-2 col-sm-3 col-5 shadow">
                         <div class="product-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                            <?php if(has_post_thumbnail()){
+                                echo the_post_thumbnail();
+                            } else { ?>
+                                <img src="<?php echo get_template_directory_uri();?>/assets/images/no-image.png"></img>
+                            <?php } ?>
                         </div>
                         <div class="product-info">
                             <div class="product-title">
@@ -111,11 +115,8 @@
                             </div>
                             <div class="product-badge" style="float: left">
                                 <?php foreach(get_field_object('promo_field')['value'] as $promo){
-                                    echo '<span class="badge bg-success">' . $promo . '</span>';
+                                    echo '<span class="badge bg-success">' . $promo . '</span> ';
                                 } ?>
-                                <!-- <span class="badge bg-success">Gratis Ongkir</span>
-                                <span class="badge bg-warning">Cashback</span>
-                                <span class="badge bg-danger">Bayar Di Tempat</span> -->
                             </div>
                             <div class="product-addr">
                                 <span>Jakarta</span>
