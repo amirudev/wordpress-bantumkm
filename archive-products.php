@@ -20,7 +20,7 @@
             $product = new WP_Query(
                 array(
                     'post_type' => 'products',
-                    'posts_per_page' => 20,
+                    'posts_per_page' => 25,
                     'offset' => 0
                 )
             );
@@ -30,7 +30,11 @@
                     $product->the_post(); ?>
                 <div class="product col-xl-2 col-sm-3 col-5 shadow">
                     <div class="product-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kf94mask.jpg">
+                        <?php if(has_post_thumbnail()){
+                            echo the_post_thumbnail();
+                        } else { ?>
+                            <img src="<?php echo get_template_directory_uri();?>/assets/images/no-image.png"></img>
+                        <?php } ?>
                     </div>
                     <div class="product-info">
                         <div class="product-title">
@@ -65,6 +69,10 @@
                 <?php }
             }
             ?>
+        </div>
+        <div class="button-post">
+            <?php previous_posts_link(); ?>
+            <?php next_posts_link(); ?>
         </div>
     </div>
 </div>
