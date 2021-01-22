@@ -92,48 +92,15 @@ header .cart p {
 /* Footer */
 
 footer {
-	display: grid;
-	grid-template-columns: auto auto;
-	background: rgb(100, 100, 100);
-	color: white;
-	clear: both;
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
-footer .brand #name{
-	padding: 20px;
-	font-weight: 600;
-	font-size: 25px;
+footer .brand-desc {
+	font-size: 0.85rem;
 }
 
-footer .brand ul {
-	font-size: 15px;
-	list-style-type: none;
-}
-
-footer .brand ul a {
-	color: white;
-	text-decoration: none;
-}
-
-footer .brand ul a:hover {
-	text-decoration: underline;
-}
-
-footer .brand ul li {
-	padding: 10px;
-}
-
-footer .dev {
-	padding: 30px;
-}
-
-footer .dev ul {
-	list-style-type: none;
-}
-
-footer .dev ul li {
-	float: left;
-	padding: 5px;
+footer .copyright p {
+	font-size: 0.85rem;
 }
 
 /*  Responsive Header and Footer */

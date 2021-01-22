@@ -1,41 +1,30 @@
-	<footer>
-		<div class="brand">
-			<h2 id="name"><?php echo get_bloginfo() ?></h2>
-			<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
+	<footer class="bg-light">
+		<div class="footer-top d-flex justify-content-around py-4">
+			<div class="brand w-25 m-3">
+				<div class="brand-name">
+					<span class="footer-text-header fs-6 fw-bold"><?php echo get_bloginfo(); ?></span>
+				</div>
+				<div class="brand-desc fw-light">
+					BantuUMKM WordPress Theme adalah theme yang dibuat selama pandemi dengan tujuan
+					berbagi kepada sesama dan mendorong pertumbuhan ekonomi 2021 dengan go digital.
+				</div>
+			</div>
+			<div class="contact m-3">
+				<span class="footer-text-header fs-6 fw-bold">Informasi Kontak</span>
+				<div class="contact-item">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/facebook.svg"></img>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/twitter.svg"></img>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/instagram.svg"></img>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/whatsapp.svg"></img>
+				</div>
+			</div>
+			<div class="address m-3">
+				<span class="footer-text-header fs-6 fw-bold">Informasi Alamat</span>
+				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/map.svg"></img> JL. Kh. Umar Rawailat No. 17</p>
+			</div>
 		</div>
-		<div class="dev">
-			<!-- 
-				This was made by Wahyu Amirulloh, this is Open Source, but please
-				don't delete this section.
-				I will be very thankful if you're keep this credit :D
-				Support me by follow these account !
-				Keep this and your karma will be +10
-			 -->
-			<p>Coded by : Wahyu Amirulloh</p>
-			<p>Contact Me</p>
-			<ul>
-				<a href="#">
-					<li><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/github-sign.png"></li>
-				</a>
-				<a href="#">
-					<li><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/linkedin.png"></li>
-				</a>
-				<a href="#">
-					<li><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/instagram.png"></li>
-				</a>
-				<a href="#">
-					<li><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/telegram.png"></li>
-				</a>
-				<a href="#">
-					<li><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/facebook.png"></li>
-				</a>
-				<a href="#">
-					<li><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/twitter.png"></li>
-				</a>
-				<a href="#">
-					<li><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/gmail.png"></li>
-				</a>
-			</ul>
+		<div class="copyright">
+			<p class="fw-light text-center">© 2021 BantuUMKM, Made with love by <a href="#" class="text-success">Wahyu Amirulloh</a></p>
 		</div>
 	</footer>
 </body>
