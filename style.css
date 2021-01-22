@@ -15,25 +15,11 @@ Text Domain: BantuUMKM;
 body {
 	font-family: Raleway, sans-serif;
 	background-color: rgb(240, 240, 240);
-	margin-top: 130px;
+	margin-top: 150px;
 	/*background-color: white;*/
 }
 
 /* Header */
-header {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	box-shadow: 0px 0px 3px black;
-	background-color: white;
-	z-index: 10;
-}
-
-header .brand {
-	padding-left: 60px;
-	margin-top: 15px;
-}
 
 header .brand img {
 	width: 100px;
@@ -49,8 +35,7 @@ header .brand #name {
 }
 
 header .nav {
-	clear: both;
-	padding: 5px 20px;
+	margin-top: 80px;
 }
 
 header .nav ul {
@@ -94,9 +79,6 @@ header .cart p {
 footer {
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 0.85rem;
-}
-
-footer .brand {
 }
 
 /*  Responsive Header and Footer */
@@ -166,11 +148,8 @@ footer .brand {
 /* Frontpage */
 
 .display-container {
-	margin: 0 auto;
 	height: 350px;
-	margin: 0 auto;
 	box-sizing: border-box;
-	margin-bottom: 50px;
 }
 
 .main-product {
@@ -178,27 +157,10 @@ footer .brand {
 	height: 102.5%;
 }
 
-.main-product-image {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
-
 .main-product-image img {
 	width: 100%;
 	object-fit: cover;
 	height: 220px;
-}
-
-.side-product {
-	height: 50%;
-	margin: 0 0 10px 10px;
-}
-
-.side-product-image {
-	position: absolute;
-	bottom: 0;
-	left: 0;
 }
 
 .side-product-image img {
@@ -210,51 +172,22 @@ footer .brand {
 .side-product .card-text p {
 	max-height: 50px;
 	overflow-y: hidden;
-} 
-
-.card {
-	margin-bottom: 20px;
-}
-
-.card-body {
-	z-index: 2;
 }
 
 .product-container {
-	margin: 50px auto;
-}
-
-.product-container .card {
-	padding-bottom: 40px;
-	height: 100%;
+	font-family: Tahoma, sans-serif;
 }
 
 .product-container .card .btn {
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
-}
-
-.page-title h3 {
-	font-size: 22px;
-	font-weight: 600;
-	font-family: Tahoma, sans-serif;
-}
-
-.page-title h3 span {
-	font-size: 17px;
-	font-weight: 600;
+	z-index: 2;
 }
 
 .product-container .product {
 	position: relative;
-	font-family: Tahoma, sans-serif;
 	height: 320px;
-	background-color: white;
-	border-radius: 10px;
-	color: #555555;
-	margin: 5px 5px 20px;
-	padding: 3px;
 }
 
 .product-container .product .bg-success {
@@ -270,14 +203,11 @@ footer .brand {
 }
 
 .product-container .product .product-info {
-	padding: 5px 10px 20px;
 	font-size: 0.88rem;
 }
 
 .product-container .product .product-price {
 	font-size: 1.1rem;
-	font-weight: bold;
-	color: black;
 }
 
 .product-container .product .product-addr span {
@@ -286,38 +216,11 @@ footer .brand {
 	left: 20px;
 }
 
-.frontpage-display .card .card-body .card-title {
-	font-size: 16px;
-	font-weight: 600;
-}
-
-.frontpage-display .card .card-body p {
-	font-size: 14px;
-}
-
 .blog .blog-image img {
 	height: 160px;
 	width: 100%;
 	object-fit: cover;
 	border-radius: 10px;
-}
-
-.blog .card {
-	margin: 0px;
-	border-radius: 10px;
-}
-
-.blog .card-title {
-	padding: 15px;
-}
-
-.blog .card-text {
-	padding-left: 15px;
-}
-
-.blog .row {
-	padding-bottom: 10px;
-	border-bottom: 1px solid grey;
 }
 
 /* Archive Blog */

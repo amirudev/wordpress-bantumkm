@@ -9,8 +9,8 @@
 	<?php wp_head() ?>
 </head>
 <body>
-	<header>
-		<div class="brand">
+	<header class="fixed-top top-0 start-0 w-100 shadow-sm bg-white">
+		<div class="brand ps-8 mt-3 ms-5">
 			<?php
 			function_exists('the_custom_logo') {
 				the_custom_logo()
@@ -18,10 +18,10 @@
 			?>
 			<h2 id="name"><?php echo get_bloginfo() ?></h2>
 		</div>
-		<div class="nav bg-light" id="navbar">
+		<div class="nav bg-light clearfix px-1 py-2" id="navbar">
 			<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
 			<div class="cart">
-				<p>3 Items - Rp47.000</p>
+				<p class="mx-4">3 Items - Rp47.000</p>
 			</div>
 			<ul>
 				<button id="nav-button-close">

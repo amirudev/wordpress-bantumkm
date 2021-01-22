@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="product-container display-container d-flex justify-content-center col-11">
+    <div class="product-container display-container d-flex justify-content-center col-11 my-5 mx-auto">
         <?php
         $posts_product_A = new WP_Query(
             array(
@@ -11,13 +11,13 @@
         if($posts_product_A->have_posts()) {
             $posts_product_A->the_post(); ?>
             <div class="main-product col-md-6 col-12">
-                <div class="card" id="card-1">
+                <div class="card h-100" id="card-1">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_title(); ?></h5>
                         <p class="card-text"><?php the_Excerpt(); ?></p>
                         <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
                     </div>
-                    <div class="main-product-image">
+                    <div class="main-product-image position-absolute bottom-0 start-0">
                         <?php the_post_thumbnail(); ?>
                     </div>
                 </div>
@@ -34,14 +34,14 @@
             );
             if($posts_product_B->have_posts()) {
                 $posts_product_B->the_post();?>
-                <div class="side-product col-12">
-                    <div class="card" id="card-2">
+                <div class="side-product col-12 h-50 m-0 mb-2 ms-3">
+                    <div class="card h-100" id="card-2">
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
                             <div class="card-text"><?php the_excerpt(); ?></div>
                             <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
                         </div>
-                        <div class="side-product-image">
+                        <div class="side-product-image position-absolute start-0 bottom-0">
                             <?php the_post_thumbnail(); ?>
                         </div>
                     </div>
@@ -57,14 +57,14 @@
             );
             if($posts_product_C->have_posts()) {
                 $posts_product_C->the_post(); ?>
-                <div class="side-product col-12">
-                    <div class="card" id="card-3">
+                <div class="side-product col-12 h-50 m-0 mb-2 ms-3">
+                    <div class="card h-100" id="card-3">
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
                             <div class="card-text"><?php the_excerpt(); ?></div>
                             <a href="#<?php the_ID(); ?>" class="btn btn-primary">Beli Sekarang</a>
                         </div>
-                        <div class="side-product-image">
+                        <div class="side-product-image position-absolute start-0 bottom-0">
                             <?php the_post_thumbnail(); ?>
                         </div>
                     </div>
@@ -72,11 +72,11 @@
             <?php } ?>
         </div>
 	</div>
-    <section class="product-container col-11">
+    <section class="product-container col-11 mx-auto my-5">
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
-                    <h3>Produk Terbaru <span><a href="#">Lihat Semua</a></span></h3>
+                    <h3 class="fs-4 fw-bold">Produk Terbaru <span class="fs-6 fw-bold"><a href="#">Lihat Semua</a></span></h3>
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@
             if($display_product->have_posts()) {
                 while($display_product->have_posts()) {
                     $display_product->the_post(); ?>
-                    <div class="product col-xl-2 col-sm-3 col-5 shadow" id="<?php the_id(); ?>">
+                    <div class="product col-xl-2 col-sm-3 col-5 shadow position-relative bg-white rounded text-secondary m-2 p-1" id="<?php the_id(); ?>">
                         <div class="product-image">
                             <?php if(has_post_thumbnail()){
                                 echo the_post_thumbnail();
@@ -100,11 +100,11 @@
                                 <img src="<?php echo get_template_directory_uri();?>/assets/images/no-image.png"></img>
                             <?php } ?>
                         </div>
-                        <div class="product-info">
+                        <div class="product-info p-2">
                             <div class="product-title">
                                 <span><?php echo get_the_title(); ?></span>
                             </div>
-                            <div class="product-price">
+                            <div class="product-price fw-bold text-dark">
                                 <span>
                                 <?php if(get_field_object('price_field')['value']){
                                     echo 'Rp' . number_format(get_field_object('price_field')['value']);
@@ -119,7 +119,7 @@
                                 } ?>
                             </div>
                             <div class="product-addr">
-                                <span>
+                                <span class="position-absolute">
                                     <?php $shipped = get_field_object('shipped_field')['value']; 
                                         if($shipped){
                                             echo $shipped;
@@ -135,16 +135,16 @@
             ?>
         </div>
     </section>
-    <section class="product-container col-11">
+    <section class="product-container col-11 mx-auto my-5">
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
-                    <h3>Blog Terbaru <span><a href="#">Lihat Semua</a></span></h3>
+                    <h3 class="fs-4 fw-bold">Blog Terbaru <span class="fs-6 fw-bold"><a href="#">Lihat Semua</a></span></h3>
                 </div>
             </div>
         </div>
-        <div class="row blog">
-            <div class="col-12 card blog p-3">
+        <div class="row blog pe-4 border border-1">
+            <div class="col-12 card blog m-0 rounded">
                 <?php
                 $display_blog = new WP_Query(
                     array(
@@ -157,13 +157,13 @@
                 if($display_blog->have_posts()) {
                     while($display_blog->have_posts()) {
                         $display_blog->the_post(); ?>
-                <div class="m-3 pb-4 row">
+                <div class="m-3 pb-4 row border-bottom border-2">
                     <div class="col-sm-3 blog-image">
                         <?php the_post_thumbnail(); ?>
                     </div>
                     <div class="col-sm-9">
-                        <h3 class="card-title"><?php the_title(); ?></h3>
-                        <p class="card-text"><?php the_excerpt(); ?></p>
+                        <h3 class="card-title p-1"><?php the_title(); ?></h3>
+                        <p class="card-text ps-3 border-bottom"><?php the_excerpt(); ?></p>
                     </div>
                 </div>
                 <?php }
