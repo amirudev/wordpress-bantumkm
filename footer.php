@@ -4,7 +4,7 @@
 				<div class="brand-name">
 					<span class="footer-text-header fs-6 fw-bold"><?php echo get_bloginfo(); ?></span>
 				</div>
-				<div class="brand-desc fw-light">
+				<div class="brand-desc fw-light text-secondary">
 					BantuUMKM WordPress Theme adalah theme yang dibuat selama pandemi dengan tujuan
 					berbagi kepada sesama dan mendorong pertumbuhan ekonomi 2021 dengan go digital.
 				</div>
@@ -20,11 +20,11 @@
 			</div>
 			<div class="address m-3">
 				<span class="footer-text-header fs-6 fw-bold">Informasi Alamat</span>
-				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/map.svg"></img> JL. Kh. Umar Rawailat No. 17</p>
+				<p class="text-secondary"><img src="<?php echo get_template_directory_uri(); ?>/assets/logo/map.svg"></img> JL. Kh. Umar Rawailat No. 17</p>
 			</div>
 		</div>
 		<div class="copyright">
-			<p class="fw-light text-center">© 2021 BantuUMKM, Made with love by <a href="#" class="text-success">Wahyu Amirulloh</a></p>
+			<p class="fw-light text-center text-secondary">© 2021 BantuUMKM, Made with love by <a href="#" class="text-success">Wahyu Amirulloh</a></p>
 		</div>
 	</footer>
 </body>

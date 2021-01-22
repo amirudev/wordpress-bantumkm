@@ -93,14 +93,10 @@ header .cart p {
 
 footer {
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
-}
-
-footer .brand-desc {
 	font-size: 0.85rem;
 }
 
-footer .copyright p {
-	font-size: 0.85rem;
+footer .brand {
 }
 
 /*  Responsive Header and Footer */
