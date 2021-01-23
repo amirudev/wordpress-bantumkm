@@ -21,7 +21,8 @@
                 array(
                     'post_type' => 'products',
                     'posts_per_page' => 25,
-                    'offset' => 0
+                    'offset' => 0,
+                    's' => $_GET['s']
                 )
             );
 
