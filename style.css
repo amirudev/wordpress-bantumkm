@@ -16,7 +16,6 @@ body {
 	font-family: Raleway, sans-serif;
 	background-color: rgb(240, 240, 240);
 	margin-top: 150px;
-	/*background-color: white;*/
 }
 
 /* Header */
@@ -225,22 +224,8 @@ footer {
 
 /* Archive Blog */
 
-.button-page {
-	margin: 0 auto;
-	width: 320px;
-}
-
-.button-page a {
-	padding: 20px;
-}
-
 .button-post {
 	width: 265px;
-	margin: 20px auto;
-}
-
-.archive-container {
-	margin-top: 150px;
 }
 
 /* Additional Configuration */
@@ -250,6 +235,11 @@ footer {
 
 .no-margin {
 	margin: 0;
+}
+
+.plain-link {
+	text-decoration: none;
+	color: black;
 }
 
 /* Styling for other screen size */

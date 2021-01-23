@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<div class="col-xl-8 col-md-10 col-sm-12 product-description">
-    <div class="card">
+<div class="col-xl-8 col-md-10 col-sm-12 product-description mx-auto p-2">
+    <div class="card p-4">
         <div class="row">
             <div class="col-xl-6">
                 <div class="product-image">
