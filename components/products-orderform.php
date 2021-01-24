@@ -25,6 +25,8 @@
                             <option value="Transfer Dompet Digital">Transfer Dompet Digital</option>
                         </select>
                     </fieldset>
+                    <?php echo $feature ?>
+                    <input type="text" name="feature" value="<?php echo $feature ?>" hidden>
                     <button type="submit" class="btn btn-outline-success col-12 my-2">Beli Sekarang</a>
                 </form>
             </div>
