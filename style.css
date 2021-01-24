@@ -250,6 +250,10 @@ footer {
 	object-fit: cover;
 }
 
+.product-description .price {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Single Blog */
 
 .single-blog .image img {
