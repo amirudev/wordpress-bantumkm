@@ -211,6 +211,6 @@ add_filter('excerpt_length', 'wp_custom_excerpt_limit');
 add_filter('next_posts_link_attributes', 'post_link_attributes_bootsbutton');
 add_filter('previous_posts_link_attributes', 'post_link_attributes_bootsbutton');
 
-// Registering wp file THIS POINT
+// Registering wp file
 get_template_part('functions/products-whatsapp');
 ?>
