@@ -1,4 +1,4 @@
-	<footer class="bg-light">
+	<footer class="bg-light position-relative">
 		<div class="footer-top d-flex justify-content-around py-4">
 			<div class="brand w-25 m-3">
 				<div class="brand-name">
