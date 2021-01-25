@@ -10,6 +10,7 @@
         );
         if($posts_product_A->have_posts()) {
             $posts_product_A->the_post(); ?>
+            <a href="<?php the_permalink(); ?>" class="plain-link">
             <div class="main-product col-md-6 col-12">
                 <div class="card h-100" id="card-1">
                     <div class="card-body">
@@ -22,6 +23,7 @@
                     </div>
                 </div>
             </div>
+            </a>
         <?php } ?>
         <div class="col-6">
             <?php
@@ -34,6 +36,7 @@
             );
             if($posts_product_B->have_posts()) {
                 $posts_product_B->the_post();?>
+                <a href="<?php the_permalink(); ?>" class="plain-link">
                 <div class="side-product col-12 h-50 m-0 mb-2 ms-3">
                     <div class="card h-100" id="card-2">
                         <div class="card-body">
@@ -46,6 +49,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
             <?php } ?>
             <?php
             $posts_product_C = new WP_Query(
@@ -57,6 +61,7 @@
             );
             if($posts_product_C->have_posts()) {
                 $posts_product_C->the_post(); ?>
+                <a href="<?php the_permalink(); ?>" class="plain-link">
                 <div class="side-product col-12 h-50 m-0 mb-2 ms-3">
                     <div class="card h-100" id="card-3">
                         <div class="card-body">
@@ -69,6 +74,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
             <?php } ?>
         </div>
 	</div>
@@ -93,6 +99,7 @@
                 while($display_product->have_posts()) {
                     $display_product->the_post(); ?>
                     <div class="product col-xl-2 col-sm-3 col-5 shadow position-relative bg-white rounded text-secondary m-2 p-1" id="<?php the_id(); ?>">
+                        <a href="<?php the_permalink(); ?>" class="plain-link">
                         <div class="product-image">
                             <?php if(has_post_thumbnail()){
                                 echo the_post_thumbnail();
@@ -129,6 +136,7 @@
                                 </span>
                             </div>
                         </div>
+                        </a>
                     </div>
                 <?php }
             }
@@ -162,8 +170,10 @@
                         <?php the_post_thumbnail(); ?>
                     </div>
                     <div class="col-sm-9">
+                        <a href="<?php the_permalink(); ?>" class="plain-link">
                         <h3 class="card-title p-1"><?php the_title(); ?></h3>
                         <p class="card-text ps-3 border-bottom"><?php the_excerpt(); ?></p>
+                        </a>
                     </div>
                 </div>
                 <?php }

@@ -67,10 +67,7 @@ header .nav-button {
 header .cart {
 	position: absolute;
 	right: 0;
-}
-
-header .cart p {
-	margin: 20px;
+	height: 40%;
 }
 
 /* Footer */
@@ -226,6 +223,11 @@ footer {
 
 .button-post {
 	width: 265px;
+}
+
+/* Archive Container */
+.archive-container {
+	font-family: Tahoma, sans-serif;
 }
 
 /* Additional Configuration */

@@ -25,7 +25,6 @@
                             <option value="Transfer Dompet Digital">Transfer Dompet Digital</option>
                         </select>
                     </fieldset>
-                    <?php echo get_theme_mod('wp_greetingsorder-text'); ?>
                     <input type="text" name="feature" value="<?php echo $feature ?>" hidden>
                     <input type="text" name="nomortelp" value="<?php echo get_theme_mod('wp_contactinfo-contact') ?>" hidden>
                     <input type="text" name="greeting" value="<?php echo get_theme_mod('wp_greetingsorder-text') ?>" hidden>
