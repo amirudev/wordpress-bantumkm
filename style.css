@@ -245,8 +245,14 @@ footer {
 }
 
 /* Single Product */
+.single-product {
+	font-family: Helvetica, sans-serif;
+}
 
-.product-description .product-image img{
+.single-product .product .product-discount {
+	text-decoration: line-through;
+}
+/* .product-description .product-image img{
 	width: 100%;
 	height: 250px;
 	object-fit: cover;
@@ -254,7 +260,7 @@ footer {
 
 .product-description .price {
 	font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 .order-form {
 	top: 190px;

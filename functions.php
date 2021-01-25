@@ -98,6 +98,15 @@ if( function_exists('acf_add_local_field_group') ){
 		'parent' => 'product_group',
 	));
 
+	// Product Discount ACF
+	acf_add_local_field(array(
+		'key' => 'discount_field',
+		'label' => 'Diskon (%)',
+		'name' => 'discount',
+		'type' => 'number',
+		'parent' => 'product_group',
+	));
+
 	// Product Promo ACF
 	acf_add_local_field(array(
 		'key' => 'promo_field',
