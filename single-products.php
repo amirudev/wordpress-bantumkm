@@ -11,7 +11,11 @@
         <hr>
         <div class="product d-flex flex-row">
             <div class="product-image col-5 p-4">
-                <img src="<?php echo get_the_post_thumbnail_url() ?>" class="w-100">
+                <?php if(has_post_thumbnail()){
+                    echo the_post_thumbnail();
+                } else { ?>
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/no-image.png"></img>
+                <?php } ?>
             </div>
             <div class="product-infoheader w-100 p-4">
                 <div class="title">

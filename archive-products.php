@@ -1,4 +1,5 @@
 <?php get_header() ?>
+<?php global $wp_query; ?>
 <div class="archive-container mt-5">
     <div class="product-container col-11 mx-auto">
         <div class="page-title">
@@ -20,8 +21,7 @@
             $product = new WP_Query(
                 array(
                     'post_type' => 'products',
-                    'posts_per_page' => 25,
-                    'offset' => 0,
+                    'posts_per_page' => 5,
                     's' => $_GET['s']
                 )
             );
@@ -69,9 +69,8 @@
                             </div>
                         </div>
                     </div>
-                <?php }
-            }
-            ?>
+                    <?php  }       
+            } ?>
         </div>
         <div class="button-post mx-auto my-2">
             <?php previous_posts_link(); ?>

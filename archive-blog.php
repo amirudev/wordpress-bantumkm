@@ -17,7 +17,11 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="image">
-                                <?php the_post_thumbnail(); ?>
+                                <?php if(has_post_thumbnail()){
+                                    echo the_post_thumbnail();
+                                } else { ?>
+                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/no-image.png"></img>
+                                <?php } ?>
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title"><?php the_title(); ?></h4>

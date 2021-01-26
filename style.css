@@ -262,6 +262,10 @@ footer {
 	text-decoration: line-through;
 }
 
+.single-product .product-image img {
+	width: 100%;
+}
+
 .order-form {
 	top: 190px;
 	left: -200%;
@@ -279,6 +283,7 @@ footer {
 	height: 400px;
 	object-fit: cover;
 }
+
 
 /* Styling for other screen size */
 
