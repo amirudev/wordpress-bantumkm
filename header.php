@@ -10,21 +10,23 @@
 </head>
 <body>
 	<header class="fixed-top top-0 start-0 w-100 shadow-sm bg-white">
-		<div class="brand ps-8 mt-3 ms-5">
-			<?php
-			function_exists('the_custom_logo') {
-				the_custom_logo()
-			}
-			?>
-			<h2 id="name"><?php echo get_bloginfo() ?></h2>
-		</div>
-		<div class="nav bg-light clearfix px-1 py-2" id="navbar">
-			<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
-			<ul>
-				<button id="nav-button-close">
-					<li>X</li>
-				</button>
-			</ul>
+		<div class="brand ps-8 ms-5">
+			<div class="brand-left">
+				<?php
+				function_exists('the_custom_logo') {
+					the_custom_logo()
+				}
+				?>
+				<h2 id="name"><?php echo get_bloginfo() ?></h2>
+			</div>
+			<div class="nav clearfix px-1 float-end" id="navbar">
+				<?php wp_nav_menu(array('theme-location' => 'header-menu')) ?>
+				<ul>
+					<button id="nav-button-close">
+						<li>X</li>
+					</button>
+				</ul>
+			</div>
 		</div>
 		<div class="nav-button" id="nav-open">
 			<button id="nav-button-open">☰</button>
