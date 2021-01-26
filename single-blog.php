@@ -1,15 +1,17 @@
 <?php get_header(); ?>
-<div class="single-blog col-xl-9 col-md-10 col-sm-11 mx-auto">
-    <div class="card rounded p-4">
-        <div class="text-center">
-            <p class="fw-bold fs-3 fw-bold"><?php the_title(); ?></p>
-            <p class="fs-6 text-muted"><?php echo get_the_date(); ?></p>
+<div class="single-blog bg-white py-3">
+    <div class="px-5">
+        <div class="title">
+            <p class="fs-3 fw-bold"><?php echo get_the_title(); ?></p>
         </div>
-        <div class="image w-75 mx-auto">
+        <div class="author ms-5 text-secondary">
+            <p><?php echo get_the_author_meta(); ?><br>Posted on <?php echo get_the_date(); ?></p>
+        </div>
+        <div class="image">
             <?php the_post_thumbnail(); ?>
         </div>
-        <div class="content my-5">
-            <?php the_content(); ?>
+        <div class="content py-3">
+            <?php echo the_content(); ?>
         </div>
     </div>
 </div>
