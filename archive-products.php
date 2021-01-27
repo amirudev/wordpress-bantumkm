@@ -32,7 +32,7 @@
                                 <div class="product-price fw-bold text-dark">
                                     <span>
                                     <?php if(get_field_object('price_field')['value']){
-                                        echo 'Rp' . number_format(get_field_object('price_field')['value']);
+                                        echo 'Rp' . number_format(get_field_object('price_field')['value'] - (get_field_object('price_field')['value'] * ( get_field_object('discount_field')['value'] / 100 )));
                                     } else {
                                         echo 'Gratis';
                                     } ?>
