@@ -2,7 +2,7 @@
 $version = wp_get_theme()->get('version');
 
 function wp_register_styles() {
-	wp_enqueue_style('bantumkm_bootstrap', get_template_directory_uri() . '/assets/bootstrap-5.0.0-beta/css/bootstrap.min.css', $version);
+	wp_enqueue_style('bantumkm_bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css', $version);
 	wp_enqueue_style('bantumkm_style', get_template_directory_uri() . '/style.css', $version);
 	wp_enqueue_style('raleway_fonts', get_template_directory_uri() . '/assets/fonts/Raleway-Regular.ttf', $version);
 	wp_enqueue_style('open_sans_fonts', get_template_directory_uri() . '/assets/fonts/OpenSans-Regular.ttf', $version);
