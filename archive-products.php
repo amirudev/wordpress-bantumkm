@@ -1,5 +1,4 @@
-<?php get_header() ?>
-<?php global $wp_query; ?>
+<?php get_header(); ?>
 <div class="archive-container mt-5">
     <div class="product-container col-11 mx-auto">
         <div class="page-title">
@@ -18,17 +17,20 @@
         </div>
         <div class="row justify-content-between">
             <?php
-            $product = new WP_Query(
+            $temp_query = $wp_query;
+
+            $wp_query = new WP_Query(
                 array(
                     'post_type' => 'products',
-                    'posts_per_page' => 5,
-                    's' => $_GET['s']
+                    'posts_per_page' => 25,
+                    's' => $_GET['s'],
+                    'paged' => $paged,
                 )
             );
 
-            if($product->have_posts()) {
-                while($product->have_posts()) {
-                    $product->the_post(); ?>
+            if($wp_query->have_posts()) {
+                while($wp_query->have_posts()) {
+                    $wp_query->the_post(); ?>
                 <div class="product col-xl-2 col-sm-3 col-5 shadow position-relative bg-white rounded text-secondary m-2 p-1" id="<?php the_id(); ?>">
                         <a href="<?php the_permalink(); ?>" class="plain-link">
                             <div class="product-image">
@@ -70,11 +72,11 @@
                         </div>
                     </div>
                     <?php  }       
-            } ?>
+            } $wp_query = $temp_query; ?>
         </div>
         <div class="button-post mx-auto my-2">
-            <?php previous_posts_link(); ?>
-            <?php next_posts_link(); ?>
+            <?php previous_posts_link('« Halaman Sebelumnya'); ?>
+            <?php next_posts_link('Halaman Selanjutnya »', $wp_query->max_num_pages); ?>
         </div>
     </div>
 </div>

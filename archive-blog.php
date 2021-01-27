@@ -4,8 +4,8 @@
     $blog = new WP_Query(
         array(
             'post_type' => 'blog',
-            'posts_per_page' => 25,
-            'offset' => 0,
+            'posts_per_page' => 6,
+            'paged' => $paged,
             's' => $_GET['s']
         )
     );
@@ -13,7 +13,7 @@
         while ($blog->have_posts()) {
             $blog->the_post();
             ?>
-                <div class="col-md-6 col-sm-12 h-100 my-2 archive-blog">
+                <div class="col-md-6 col-sm-12 my-2 archive-blog">
                     <div class="card">
                         <div class="card-content">
                             <div class="image">
@@ -37,5 +37,9 @@
         }
     }
     ?>
+    <div class="button-post mx-auto my-2 mx-auto">
+        <?php previous_posts_link('« Halaman Sebelumnya'); ?>
+        <?php next_posts_link('Halaman Selanjutnya »', $wp_query->max_num_pages); ?>
+    </div>
 </div>
 <?php get_footer(); ?>

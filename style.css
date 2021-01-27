@@ -239,6 +239,10 @@ footer {
 	font-family: Tahoma, sans-serif;
 }
 
+.button-post {
+	width: 430px;
+}
+
 /* Additional Configuration */
 .no-radius img {
 	border-radius: 0;
