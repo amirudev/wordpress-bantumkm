@@ -3,9 +3,9 @@
     <div class="col-12 container single-product pt-3">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb p-1">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Products</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
+                <li class="breadcrumb-item"><a href="../..">Home</a></li>
+                <li class="breadcrumb-item"><a href="..">Products</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><?php echo get_the_title(); ?></li>
             </ol>
         </nav>
         <hr>
@@ -29,9 +29,9 @@
                             echo 'Gratis';
                         } ?> <span class="fs-6 text-danger product-discount">
                             <?php if(get_field_object('price_field')['value']){
-                                echo 'Rp' . number_format(get_field_object('price_field')['value'] + 10000);
+                                echo 'Rp' . number_format(get_field_object('price_field')['value'] + get_theme_mod('wp_advconfig-discount'));
                             } else {
-                                echo 'Gratis';
+                                echo 'Rp' . number_format(get_theme_mod('wp_advconfig-discount'));
                             } ?>
                         </span></p>
                 </div>

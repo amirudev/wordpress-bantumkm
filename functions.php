@@ -159,6 +159,19 @@ function wp_customize_register_contactsinfo($wp_customize) {
 			'priority' => 1
 		)
 	));
+
+	$wp_customize->add_setting('wp_contactinfo-address', array());
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'wp_contactaddress_control',
+		array(
+			'label' => __('Informasi Alamat', 'wp'),
+			'description' => 'Alamat yang akan dicantumkan di footer untuk memudahkan pembeli menemukan lokasi',
+			'section' => 'wp_contactinfo_section',
+			'settings' => 'wp_contactinfo-address',
+			'priority' => 1
+		)
+	));
 }
 
 // Customize Register GreetingsOrder
@@ -177,6 +190,40 @@ function wp_customize_register_greetingsorder($wp_customize) {
 			'description' => 'Digunakan sebagai perkataan sapaan untuk pelanggan saat memesan barang ( Contoh : Halo, Selamat Pagi )',
 			'section' => 'wp_greetingsorder_section',
 			'settings' => 'wp_greetingsorder-text',
+			'priority' => 1
+		)
+	));
+}
+
+// Customize Konfigurasi Tambahan
+function wp_customize_register_advancedsetting($wp_customize) {
+	$wp_customize->add_section('wp_advconfig_section', array(
+		'title' => 'Konfigurasi Tambahan',
+		'priority' => 30
+	));
+
+	$wp_customize->add_setting('wp_advconfig-discount', array());
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'wp_advconfig_discount',
+		array(
+			'label' => __('Diskon', 'wp'),
+			'description' => 'Masukkan nominal diskon ( palsu, hanya digunakan untuk marketing )',
+			'section' => 'wp_advconfig_section',
+			'settings' => 'wp_advconfig-discount',
+			'priority' => 1
+		)
+	));
+
+	$wp_customize->add_setting('wp_advconfig-subtextproduk', array());
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'wp_advconfig_subtextproduk',
+		array(
+			'label' => __('Sub-Text untuk halaman Produk', 'wp'),
+			'description' => 'Masukkan kalimat untuk subtext pada heading Produk ( Contoh : Produk murah tiap hari )',
+			'section' => 'wp_advconfig_section',
+			'settings' => 'wp_advconfig-subtextproduk',
 			'priority' => 1
 		)
 	));
@@ -207,6 +254,7 @@ add_action('init', 'register_my_menus');
 // Register Customize Register
 add_action('customize_register', 'wp_customize_register_contactsinfo');
 add_action('customize_register', 'wp_customize_register_greetingsorder');
+add_action('customize_register', 'wp_customize_register_advancedsetting');
 
 // Excerpt Configuration
 add_filter('excerpt_more', function(){

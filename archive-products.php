@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-12">
                     <h3>Produk</h3>
-                    <p class="text-subtitle text-muted">Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.</p>
+                    <p class="text-subtitle text-muted"><?php echo get_theme_mod('wp_advconfig-subtextproduk') ?></p>
                 </div>
             </div>
         </div>
