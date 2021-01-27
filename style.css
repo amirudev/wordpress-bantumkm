@@ -69,6 +69,7 @@ header .nav ul button {
 
 header .nav-button {
 	display: none;
+	float: right;
 }
 
 header .cart {
@@ -96,11 +97,7 @@ footer {
 	}
 
 	header .brand-left a {
-		left: 20px;
-	}
-
-	header .brand-left #name {
-		left: 115px;
+		float: left;
 	}
 
 	header .nav-button {
@@ -320,6 +317,10 @@ footer {
 		position: absolute;
 		top: 64px;
 		left: 0;
+	}
+
+	header .brand #name {
+		padding-left: 0;
 	}
 
 	.archive-container {

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="bg-white">
+<div class="bg-white mb-5">
     <div class="col-12 container single-product pt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb p-1">
