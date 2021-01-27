@@ -15,7 +15,7 @@ Text Domain: BantuUMKM;
 body {
 	font-family: Raleway, sans-serif;
 	background-color: rgb(240, 240, 240);
-	margin-top: 80px;
+	margin-top: 34px;
 }
 
 /* Header */
@@ -302,7 +302,7 @@ footer {
 	}
 	
 	body {
-		margin-top: 45px;
+		margin-top: -24px;
 	}
 }
 
@@ -353,7 +353,6 @@ footer {
 	}
 
 	.product-container {
-		margin-top: 10px!important;
 		margin-bottom: 10px!important;
 	}
 

@@ -1,5 +1,8 @@
 <?php get_header(); ?>
-<div class="row container mx-auto">
+<div class="row container mx-auto py-5 bg-white">
+    <div class="page-title col-12">
+        <h3>Blog dan Berita <span class="text-subtitle text-muted fs-6 fs-light"><?php echo get_theme_mod('wp_advconfig-subtextblog') ?></span></h3>
+    </div>
     <?php
     $blog = new WP_Query(
         array(

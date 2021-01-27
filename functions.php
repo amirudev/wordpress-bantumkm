@@ -227,6 +227,19 @@ function wp_customize_register_advancedsetting($wp_customize) {
 			'priority' => 1
 		)
 	));
+
+	$wp_customize->add_setting('wp_advconfig-subtextblog', array());
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'wp_advconfig_subtextblog',
+		array(
+			'label' => __('Sub-Text untuk halaman Blog dan Berita', 'wp'),
+			'description' => 'Masukkan kalimat untuk subtext pada heading Blog dan Berita ( Contoh : Berita terbaru yang paling akurat )',
+			'section' => 'wp_advconfig_section',
+			'settings' => 'wp_advconfig-subtextblog',
+			'priority' => 1
+		)
+	));
 }
 
 // Bootstrap a button post link
