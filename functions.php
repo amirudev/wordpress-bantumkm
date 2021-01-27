@@ -156,7 +156,8 @@ function wp_customize_register_contactsinfo($wp_customize) {
 			'description' => 'Akan digunakan sebagai link menuju WhatsApp kamu disetiap produk, gunakan 62xx',
 			'section' => 'wp_contactinfo_section',
 			'settings' => 'wp_contactinfo-contact',
-			'priority' => 1
+			'priority' => 1,
+			'default' => '6281283708972'
 		)
 	));
 
@@ -169,7 +170,8 @@ function wp_customize_register_contactsinfo($wp_customize) {
 			'description' => 'Alamat yang akan dicantumkan di footer untuk memudahkan pembeli menemukan lokasi',
 			'section' => 'wp_contactinfo_section',
 			'settings' => 'wp_contactinfo-address',
-			'priority' => 1
+			'priority' => 1,
+			'default' => 'Jl. Kh. Umar Rawailat'
 		)
 	));
 }
@@ -190,7 +192,8 @@ function wp_customize_register_greetingsorder($wp_customize) {
 			'description' => 'Digunakan sebagai perkataan sapaan untuk pelanggan saat memesan barang ( Contoh : Halo, Selamat Pagi )',
 			'section' => 'wp_greetingsorder_section',
 			'settings' => 'wp_greetingsorder-text',
-			'priority' => 1
+			'priority' => 1,
+			'default' => 'Halo, Selamat pagi'
 		)
 	));
 }
@@ -211,7 +214,8 @@ function wp_customize_register_advancedsetting($wp_customize) {
 			'description' => 'Masukkan nominal diskon ( palsu, hanya digunakan untuk marketing )',
 			'section' => 'wp_advconfig_section',
 			'settings' => 'wp_advconfig-discount',
-			'priority' => 1
+			'priority' => 1,
+			'default' => '10000'
 		)
 	));
 
@@ -224,7 +228,8 @@ function wp_customize_register_advancedsetting($wp_customize) {
 			'description' => 'Masukkan kalimat untuk subtext pada heading Produk ( Contoh : Produk murah tiap hari )',
 			'section' => 'wp_advconfig_section',
 			'settings' => 'wp_advconfig-subtextproduk',
-			'priority' => 1
+			'priority' => 1,
+			'default' => 'Produk murah setiap hari !'
 		)
 	));
 
@@ -237,7 +242,8 @@ function wp_customize_register_advancedsetting($wp_customize) {
 			'description' => 'Masukkan kalimat untuk subtext pada heading Blog dan Berita ( Contoh : Berita terbaru yang paling akurat )',
 			'section' => 'wp_advconfig_section',
 			'settings' => 'wp_advconfig-subtextblog',
-			'priority' => 1
+			'priority' => 1,
+			'default' => 'Berita terbaru dan teraktual hari ini'
 		)
 	));
 }
