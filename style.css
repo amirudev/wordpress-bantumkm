@@ -15,7 +15,7 @@ Text Domain: BantuUMKM;
 body {
 	font-family: Raleway, sans-serif;
 	background-color: rgb(240, 240, 240);
-	margin-top: 50px;
+	margin-top: 80px;
 }
 
 /* Header */
@@ -41,7 +41,7 @@ header .brand .brand-left #name {
 	padding-left: 20px;
 	position: absolute;
 	top: 10px;
-	left: 140px;
+	left: 135px;
 }
 
 header .nav ul {
@@ -91,13 +91,16 @@ footer {
 		padding: 0;
 	}
 
-	header .brand img {
-		margin-top: 10px;
+	header .brand #name {
+		padding-top: 6px;
 	}
 
-	header .brand #name {
-		padding-top: 12px;
-		margin-top: 10px;
+	header .brand-left a {
+		left: 20px;
+	}
+
+	header .brand-left #name {
+		left: 115px;
 	}
 
 	header .nav-button {
@@ -297,23 +300,26 @@ footer {
 
 /* Tablet Size */
 @media only screen and (max-width: 770px) {
-	body {
-		margin-top: 105px;
-	}
-
 	.archive-container {
 		margin-top: 130px;
+	}
+	
+	body {
+		margin-top: 45px;
 	}
 }
 
 /* Mobile Size */
 @media only screen and (max-width: 430px) {
-	body {
-		margin-top: 5px;
-	}
 
 	header .brand {
 		margin-top: 0;
+	}
+
+	header .nav {
+		position: absolute;
+		top: 64px;
+		left: 0;
 	}
 
 	.archive-container {
@@ -322,10 +328,6 @@ footer {
 
 	div#nav-open {
 		height: 70px;
-	}
-
-	#nav-open button {
-		height: 100%;
 	}
 
 	.display-container {
@@ -350,7 +352,8 @@ footer {
 	}
 
 	.product-container {
-		margin-top: 0;
+		margin-top: 10px!important;
+		margin-bottom: 10px!important;
 	}
 
 	.side-product {
@@ -359,5 +362,9 @@ footer {
 
 	.product-container .product {
 		height: 340px;
+	}
+
+	.brand-left img {
+		top: 0
 	}
 }

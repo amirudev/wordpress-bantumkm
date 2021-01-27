@@ -31,7 +31,7 @@
             if($wp_query->have_posts()) {
                 while($wp_query->have_posts()) {
                     $wp_query->the_post(); ?>
-                <div class="product col-xl-2 col-sm-3 col-5 shadow position-relative bg-white rounded text-secondary m-2 p-1" id="<?php the_id(); ?>">
+                <div class="product col-xl-2 col-sm-3 col-5 shadow position-relative bg-white rounded text-secondary m-2 p-1 mx-auto" id="<?php the_id(); ?>">
                         <a href="<?php the_permalink(); ?>" class="plain-link">
                             <div class="product-image">
                                 <?php if(has_post_thumbnail()){

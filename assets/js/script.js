@@ -14,4 +14,8 @@ window.addEventListener('load', () => {
 	document.getElementById('whatsappbutton').addEventListener('click', () => {
 		document.getElementById('whatsapp-orderform').style.left = '17%';
 	});
+
+	document.getElementById('whatsappclose').addEventListener('click', () => {
+		document.getElementById('whatsapp-orderform').style.left = '-200%';
+	});
 });

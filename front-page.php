@@ -11,7 +11,7 @@
         if($posts_product_A->have_posts()) {
             $posts_product_A->the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="plain-link">
-            <div class="main-product col-md-6 col-12">
+            <div class="main-product col-sm-6 col-12">
                 <div class="card h-100" id="card-1">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_title(); ?></h5>
@@ -98,7 +98,7 @@
             if($display_product->have_posts()) {
                 while($display_product->have_posts()) {
                     $display_product->the_post(); ?>
-                    <div class="product col-xl-2 col-sm-3 col-5 shadow position-relative bg-white rounded text-secondary m-2 p-1" id="<?php the_id(); ?>">
+                    <div class="product col-xl-2 col-sm-3 col-10 shadow position-relative bg-white rounded text-secondary m-2 p-1" id="<?php the_id(); ?>">
                         <a href="<?php the_permalink(); ?>" class="plain-link">
                         <div class="product-image">
                             <?php if(has_post_thumbnail()){
@@ -151,7 +151,7 @@
                 </div>
             </div>
         </div>
-        <div class="row blog pe-4 border border-1">
+        <div class="row blog mx-2">
             <div class="col-12 card blog m-0 rounded">
                 <?php
                 $display_blog = new WP_Query(

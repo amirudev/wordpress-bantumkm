@@ -1,7 +1,8 @@
 <div class="col-md-8 mx-auto order-form position-absolute" id="whatsapp-orderform">
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Form Pemesanan</h4>
+            <h4 class="card-title float-start">Form Pemesanan</h4>
+            <button type="button" class="btn-close float-end" id="whatsappclose" aria-label="Close"></button>
         </div>
         
         <div class="card-body">
