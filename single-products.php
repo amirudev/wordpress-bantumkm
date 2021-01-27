@@ -24,14 +24,15 @@
                 <div class="price">
                     <p class="fs-3 fw-bold text-success">
                         <?php if(get_field_object('price_field')['value']){
-                            echo 'Rp' . number_format(get_field_object('price_field')['value']);
+                            $price = number_format(get_field_object('price_field')['value'] - (get_field_object('price_field')['value'] * ( get_field_object('discount_field')['value'] / 100 )));
+                            echo 'Rp' . $price;
                         } else {
                             echo 'Gratis';
-                        } ?> <span class="fs-6 text-danger product-discount">
+                        } ?> <span class="fs-6 text-danger">
                             <?php if(get_field_object('price_field')['value']){
-                                echo 'Rp' . number_format(get_field_object('price_field')['value'] + get_theme_mod('wp_advconfig-discount'));
+                                echo 'Diskon ' . get_field_object('discount_field')['value'] . '% dari <span class="product-discount">Rp' . number_format(get_field_object('price_field')['value']) . '</span>';
                             } else {
-                                echo 'Rp' . number_format(get_theme_mod('wp_advconfig-discount'));
+                                echo ' ';
                             } ?>
                         </span></p>
                 </div>
