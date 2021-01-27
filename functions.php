@@ -204,21 +204,7 @@ function wp_customize_register_advancedsetting($wp_customize) {
 		'title' => 'Konfigurasi Tambahan',
 		'priority' => 30
 	));
-
-	$wp_customize->add_setting('wp_advconfig-discount', array());
-	$wp_customize->add_control(new WP_Customize_Control(
-		$wp_customize,
-		'wp_advconfig_discount',
-		array(
-			'label' => __('Diskon', 'wp'),
-			'description' => 'Masukkan nominal diskon ( palsu, hanya digunakan untuk marketing )',
-			'section' => 'wp_advconfig_section',
-			'settings' => 'wp_advconfig-discount',
-			'priority' => 1,
-			'default' => '10000'
-		)
-	));
-
+	
 	$wp_customize->add_setting('wp_advconfig-subtextproduk', array());
 	$wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
