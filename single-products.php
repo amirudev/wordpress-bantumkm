@@ -22,14 +22,19 @@
                     <p class="fs-2"><?php echo get_the_title(); ?></p>
                 </div>
                 <div class="price">
+                    <?php if(is_numeric(get_field_object('discount_field')['value'])) {
+                        $discount = get_field_object('discount_field')['value'];
+                        $price = number_format(get_field_object('price_field')['value'] - (get_field_object('price_field')['value'] * ( get_field_object('discount_field')['value'] / 100 )));
+                    } else {
+                        $price = number_format(get_field_object('price_field')['value']);
+                    } ?>
                     <p class="fs-3 fw-bold text-success">
                         <?php if(get_field_object('price_field')['value']){
-                            $price = number_format(get_field_object('price_field')['value'] - (get_field_object('price_field')['value'] * ( get_field_object('discount_field')['value'] / 100 )));
                             echo 'Rp' . $price;
                         } else {
                             echo 'Gratis';
                         } ?> <span class="fs-6 text-danger">
-                            <?php if(get_field_object('price_field')['value']){
+                            <?php if($discount){
                                 echo 'Diskon ' . get_field_object('discount_field')['value'] . '% dari <span class="product-discount">Rp' . number_format(get_field_object('price_field')['value']) . '</span>';
                             } else {
                                 echo ' ';
