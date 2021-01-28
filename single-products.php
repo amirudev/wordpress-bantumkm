@@ -26,7 +26,9 @@
                         $discount = get_field_object('discount_field')['value'];
                         $price = number_format(get_field_object('price_field')['value'] - (get_field_object('price_field')['value'] * ( get_field_object('discount_field')['value'] / 100 )));
                     } else {
-                        $price = number_format(get_field_object('price_field')['value']);
+                        if(is_numeric(get_field_object('price_field')['value'])){
+                            $price = number_format(get_field_object('price_field')['value']);
+                        }
                     } ?>
                     <p class="fs-3 fw-bold text-success">
                         <?php if(get_field_object('price_field')['value']){

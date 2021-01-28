@@ -9,7 +9,7 @@
 	<?php wp_head() ?>
 </head>
 <body>
-	<header class="fixed-top top-0 start-0 col-12 shadow-sm bg-white">
+	<header class="fixed-top top-0 start-0 mb-5 col-12 shadow-sm bg-white">
 		<div class="brand ps-8 ms-5">
 			<div class="brand-left">
 				<?php
