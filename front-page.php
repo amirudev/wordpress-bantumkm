@@ -112,9 +112,19 @@
                                 <span><?php echo get_the_title(); ?></span>
                             </div>
                             <div class="product-price fw-bold text-dark">
+                                <?php if(is_numeric(get_field_object('discount_field')['value'])) {
+                                    $discount = get_field_object('discount_field')['value'];
+                                    $price = number_format(get_field_object('price_field')['value'] - (get_field_object('price_field')['value'] * ( get_field_object('discount_field')['value'] / 100 )));
+                                } else {
+                                    if(get_field_object('price_field')['value']){
+                                        $price = number_format(get_field_object('price_field')['value']);
+                                    } else {
+                                        $price = 0;
+                                    }
+                                } ?>
                                 <span>
-                                <?php if(get_field_object('price_field')['value']){
-                                    echo 'Rp' . number_format(get_field_object('price_field')['value']);
+                                <?php if($price){
+                                    echo 'Rp' . $price;
                                 } else {
                                     echo 'Gratis';
                                 } ?>
