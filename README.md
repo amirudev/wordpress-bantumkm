@@ -33,9 +33,7 @@ During pandemic, I was made this for learning purpose and want to help my neighb
 - Bootstrap 5 Based
 
 ## 🏃🏻 Demo
-- Indonesian Version : 
-- English Version : 
-- Japanese Version :
+- Indonesian Version : http://wordpressbantumkm.skom.id/
 
 ## 👷🏼 Contributing
 - Click Fork button on top screen
@@ -45,7 +43,7 @@ During pandemic, I was made this for learning purpose and want to help my neighb
 - Make a Pull request
 
 ## 👷🏻 Tutorial Installation
-YouTube : 
+YouTube : https://youtu.be/JcLSq3StJpg
 
 ## 👨🏻‍🍳 How to use
 1. Complete WordPress setup installation and Installation Tutorial
